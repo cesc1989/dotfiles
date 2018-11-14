@@ -1,0 +1,36 @@
+# Shell
+alias ll="ls -l"
+alias la="ls -a"
+alias ..="cd .."
+alias ...="cd ../.."
+alias projects="cd ~/projects"
+alias psg="ps aux | grep"
+alias h="history"
+
+alias reload="source ~/.bash_profile"
+aliast os_version="lsb_release -d"
+
+# Git
+alias gst="git status"
+alias ga="git add"
+alias glg="git log --graph"
+alias glg_graphed='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
+
+# Vagrant
+alias vup="vagrant up"
+alias vssh="vagrant ssh"
+alias vus="vagrant up && vagrant ssh"
+alias vh="vagrant halt"
+alias vdf="vagrant destroy -f"
+
+# Ruby on Rails
+alias be="bundle exec"
+
+# Docker
+alias dc="docker-compose"
+alias dcu="dc up"
+alias dcp="dc ps"
+alias dcg="dcp | grep"
+
+# Other
+alias aliases="cat $HOME/.aliases"

@@ -1,0 +1,19 @@
+[user]
+  email = frajaquico@yahoo.es
+  name  = Francisco Quintero
+[alias]
+  st   = status
+  cm   = commit
+  co   = checkout
+  cob  = checkout -b
+  l    = log
+  lol  = log --oneline
+  b    = branch
+  a    = add
+  rso  = remote show origin
+  pr   = pull-request
+  fups = fetch upstream
+  rsup = remote show upstream
+  rpror = remote prune origin
+[core]
+  editor = nano

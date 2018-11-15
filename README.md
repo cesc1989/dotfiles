@@ -12,14 +12,16 @@ and this getting started guide: [Getting Started with Dotfiles](https://medium.c
 
 ## Installation
 
-Clone this repo
+Clone this repo:
 
 ```bash
 $ git clone https://github.com/cesc1989/dotfiles ~/.dotfiles
 ```
 
-Symlink files to $HOME folder
+Symlink files to `$HOME` folder:
 
 ```bash
-$ 
+$ ln -sv "/home/$(whoami)/.dotfiles/runcom/.bash_profile" ~
+$ ln -sv "/home/$(whoami)/.dotfiles/runcom/.inputrc" ~
+$ ln -sv "/home/$(whoami)/.dotfiles/git/.gitconfig" ~
 ```

@@ -6,21 +6,30 @@ alias ...="cd ../.."
 alias projects="cd ~/projects"
 alias psg="ps aux | grep"
 alias h="history"
-
 alias reload="source ~/.profile"
 alias os_version="lsb_release -d"
 alias 64bit="getconf LONG_BIT"
 
 # Git
 alias gst="git status"
-alias gcob="git checkout -b"
-alias ga="git add"
+alias ga="git add -A"
 alias gcm="git commit"
 alias gcma="git commit -am"
+
+# Git Branching
+alias gb="git branch"
+alias gcob="git checkout -b"
+alias gco="git checkout"
+alias gbd="git branch -d"
+
+# Git Remotes
 alias gps="git push"
 alias gpl="git pull"
+alias gf="git fetch"
 alias grso="git remote show origin"
 alias gpruneorigin="git remote prune origin"
+
+# Git Log
 alias glg="git log --graph"
 alias glg_graphed='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
 

@@ -7,24 +7,34 @@ alias projects="cd ~/projects"
 alias psg="ps aux | grep"
 alias h="history"
 
-alias reload="source ~/.bash_profile"
+alias reload="source ~/.profile"
 alias os_version="lsb_release -d"
+alias 64bit="getconf LONG_BIT"
 
 # Git
 alias gst="git status"
+alias gcob="git checkout -b"
 alias ga="git add"
+alias gcm="git commit"
+alias gcma="git commit -am"
+alias gps="git push"
+alias gpl="git pull"
+alias grso="git remote show origin"
+alias gpruneorigin="git remote prune origin"
 alias glg="git log --graph"
 alias glg_graphed='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
 
 # Vagrant
+alias vst="vagrant status"
 alias vup="vagrant up"
 alias vssh="vagrant ssh"
-alias vus="vagrant up && vagrant ssh"
-alias vh="vagrant halt"
-alias vdf="vagrant destroy -f"
+alias vupssh="vagrant up && vagrant ssh"
+alias vhalt="vagrant halt"
+alias vdestroyf="vagrant destroy -f"
 
 # Ruby on Rails
 alias be="bundle exec"
+alias bi="bundle install"
 
 # Docker
 alias dc="docker-compose"

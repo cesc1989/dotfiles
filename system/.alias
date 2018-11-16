@@ -8,7 +8,7 @@ alias psg="ps aux | grep"
 alias h="history"
 
 alias reload="source ~/.bash_profile"
-aliast os_version="lsb_release -d"
+alias os_version="lsb_release -d"
 
 # Git
 alias gst="git status"

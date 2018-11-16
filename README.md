@@ -25,3 +25,11 @@ $ ln -sv "/home/$(whoami)/.dotfiles/runcom/.bash_profile" ~
 $ ln -sv "/home/$(whoami)/.dotfiles/runcom/.inputrc" ~
 $ ln -sv "/home/$(whoami)/.dotfiles/git/.gitconfig" ~
 ```
+
+Add the following snippet in `~/.profile`:
+
+```bash
+if [ -f "$HOME/.bash_profile" ]; then
+. "$HOME/.bash_profile"
+fi
+```

@@ -1,9 +1,11 @@
 # Shell
+alias l="ls"
 alias ll="ls -l"
 alias la="ls -a"
 alias ..="cd .."
 alias ...="cd ../.."
 alias projects="cd ~/projects"
+alias dotfiles="cd ~/.dotfiles"
 alias psg="ps aux | grep"
 alias h="history"
 alias reload="source ~/.profile"
@@ -12,7 +14,8 @@ alias 64bit="getconf LONG_BIT"
 
 # Git
 alias gst="git status"
-alias ga="git add -A"
+alias ga="git add"
+alias gaA="git add -A"
 alias gcm="git commit"
 alias gcma="git commit -am"
 
@@ -21,6 +24,8 @@ alias gb="git branch"
 alias gcob="git checkout -b"
 alias gco="git checkout"
 alias gbd="git branch -d"
+alias gmrg="git merge"
+alias grbs="git rebase"
 
 # Git Remotes
 alias gps="git push"

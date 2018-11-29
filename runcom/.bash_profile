@@ -2,13 +2,13 @@
 
 # See webpro installation script: https://github.com/webpro/dotfiles/blob/master/runcom/.bash_profile
 
-for DOTFILE in $HOME/.dotfiles/system/.{alias,prompt}; do
+for DOTFILE in $HOME/projects/dotfiles/system/.{alias,prompt}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
-  
+
   # Add git completion to aliases
   __git_complete g _git_main
   __git_complete ga _git_add

@@ -3,17 +3,26 @@
   name  = Francisco Quintero
 [alias]
   st   = status
+  a    = add
+  aA   = add -A
   cm   = commit
-  co   = checkout
+  cma  = commit -am
+  b    = branch
+  bd   = branch -d
   cob  = checkout -b
+  co   = checkout
+  mrg  = merge
+  rbs  = rebase
+  ps   = push
+  pl   = pull
+  f    = fetch
+  fups = fetch upstream
+  pr   = pull-request
+  rso  = remote show origin
+  rsup = remote show upstream
+  pruneorigin = remote prune origin
   l    = log
   lol  = log --oneline
-  b    = branch
-  a    = add
-  rso  = remote show origin
-  pr   = pull-request
-  fups = fetch upstream
-  rsup = remote show upstream
-  rpror = remote prune origin
+  lg   = log --graph
 [core]
   editor = nano

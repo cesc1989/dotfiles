@@ -15,6 +15,7 @@ alias 64bit="getconf LONG_BIT"
 # Dev As Pros
 alias avanzza="cd ~/projects/devaspros-projects/avanzza"
 alias fandf="cd ~/projects/devaspros-projects/feed-and-fit"
+alias lupita="cd ~/projects/devaspros-projects/macsa"
 
 # Git
 alias gst="git status"
@@ -22,6 +23,7 @@ alias ga="git add"
 alias gaA="git add -A"
 alias gcm="git commit"
 alias gcma="git commit -am"
+alias gdf="git diff"
 
 # Git Branching
 alias gb="git branch"
@@ -41,6 +43,7 @@ alias gpruneorigin="git remote prune origin"
 # Git Log
 alias glg="git log --graph"
 alias glg_graphed='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
+alias glol="git log -n"
 
 # Vagrant
 alias vst="vagrant status"

@@ -1,7 +1,6 @@
 ## Prompt
 
 _bash_prompt_config() {
-
   local USER_SYMBOL="\u"
   local HOST_SYMBOL="\h"
   local ESC_OPEN="\["
@@ -56,11 +55,9 @@ _bash_prompt_config() {
   P_YELLOW=${YELLOW}
   P_RED=${RED}
   P_RESET=${RESET}
-
 }
 
 bash_prompt_command() {
-
   local EXIT_CODE=$?
   local P_EXIT=""
   local MAXLENGTH=35

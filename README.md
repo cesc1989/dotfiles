@@ -1,6 +1,6 @@
 # Personal Dotfiles
 
-This are my configuration files. Should work on _*nix_ systems although are created in Linux Mint 19(Ubuntu 18.04).
+These are my local enviroment configuration files. Should work on _*nix_ systems although are created in Linux Mint 19(Ubuntu 18.04).
 
 This work is based on other dotfiles:
 

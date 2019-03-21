@@ -22,7 +22,6 @@ Symlink files to `$HOME` folder:
 
 ```bash
 $ ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
-$ ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.inputrc" ~
 $ ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitconfig" ~
 ```
 

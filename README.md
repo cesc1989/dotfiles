@@ -25,6 +25,13 @@ $ ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
 $ ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitconfig" ~
 ```
 
+On macOS:
+
+```bash
+$ ln -sv "/Users/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
+$ ln -sv "/Users/$(whoami)/projects/dotfiles/git/.gitconfig" ~
+```
+
 Add the following snippet in `~/.profile`:
 
 ```bash

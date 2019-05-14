@@ -17,6 +17,9 @@ alias avanzza="cd ~/projects/devaspros-projects/avanzza"
 alias fandf="cd ~/projects/devaspros-projects/feed-and-fit"
 alias lupita="cd ~/projects/devaspros-projects/macsa"
 
+# Ideaware
+alias luna="cd ~/projects/luna-project/patient-forms-backend"
+
 # Git
 alias gst="git status"
 alias ga="git add"
@@ -57,6 +60,8 @@ alias vdestroyf="vagrant destroy -f"
 alias be="bundle exec"
 alias bi="bundle install"
 alias rdbm="rails db:migrate"
+alias rserv="rails server"
+alias rrou="rails routes"
 
 # Docker
 alias dc="docker-compose"

@@ -48,6 +48,10 @@ alias glg="git log --graph"
 alias glg_graphed='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
 alias glol="git log -n"
 
+# Git Stash
+alias gsthl="git stash list"
+alias gsthp="git stash pop"
+
 # Vagrant
 alias vst="vagrant status"
 alias vup="vagrant up"

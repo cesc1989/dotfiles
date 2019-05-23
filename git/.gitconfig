@@ -24,5 +24,7 @@
   l    = log
   lol  = log --oneline
   lg   = log --graph
+  stashl = stash list
+  stashp = stash pop
 [core]
   editor = nano

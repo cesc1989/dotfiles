@@ -28,3 +28,6 @@
   stashp = stash pop
 [core]
   editor = nano
+[push]
+  # See details about this config here https://git-scm.com/docs/git-config/2.20.0#git-config-pushdefault
+  default = current

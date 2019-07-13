@@ -12,14 +12,6 @@ alias reload="source ~/.profile"
 alias os_version="lsb_release -d"
 alias 64bit="getconf LONG_BIT"
 
-# Dev As Pros
-alias avanzza="cd ~/projects/devaspros-projects/avanzza"
-alias fandf="cd ~/projects/devaspros-projects/feed-and-fit"
-alias lupita="cd ~/projects/devaspros-projects/macsa"
-
-# Ideaware
-alias luna="cd ~/projects/luna-project/patient-forms-backend"
-
 # Git
 alias gst="git status"
 alias ga="git add"

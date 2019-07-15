@@ -6,6 +6,9 @@ for DOTFILE in $HOME/projects/dotfiles/system/.{alias,prompt}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 
+# -f is for regular files
+# those that can be created with `touch` command
+#
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 
@@ -25,11 +28,17 @@ if [ -f ~/.git-completion.bash ]; then
   __git_complete gf _git_fetch
 fi
 
-if [ -f "$HOME/.nvm" ]; then
+# -d is for directories
+if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
 
   # This loads nvm
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   # This loads nvm bash_completion
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+fi
+
+# This is for the IW MBP - macOS Mojave
+if [ -d "/Users/fquintero/Library/Python/2.7/bin" ]; then
+  export PATH="$PATH:/Users/fquintero/Library/Python/2.7/bin"
 fi

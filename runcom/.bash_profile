@@ -24,3 +24,12 @@ if [ -f ~/.git-completion.bash ]; then
   __git_complete gpl _git_pull
   __git_complete gf _git_fetch
 fi
+
+if [ -f "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+
+  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  # This loads nvm bash_completion
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+fi

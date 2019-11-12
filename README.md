@@ -15,6 +15,7 @@ and this getting started guide: [Getting Started with Dotfiles](https://medium.c
 Clone this repo:
 
 ```bash
+$ cd ~/projects
 $ git clone https://github.com/cesc1989/dotfiles
 ```
 

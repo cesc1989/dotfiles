@@ -31,3 +31,13 @@
 [push]
   # See details about this config here https://git-scm.com/docs/git-config/2.20.0#git-config-pushdefault
   default = current
+[core]
+  editor = subl --wait
+[merge]
+  tool = subl
+[mergetool "subl"]
+  cmd = subl --wait $MERGED
+[diff]
+  tool = subl
+[difftool "subl"]
+  cmd = subl --wait --diff $LOCAL $REMOTE

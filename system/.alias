@@ -4,13 +4,22 @@ alias ll="ls -l"
 alias la="ls -a"
 alias ..="cd .."
 alias ...="cd ../.."
-alias projects="cd ~/projects"
-alias dotfiles="cd ~/projects/dotfiles"
 alias psg="ps aux | grep"
 alias h="history"
 alias reload="source ~/.profile"
 alias os_version="lsb_release -d"
 alias 64bit="getconf LONG_BIT"
+
+# Folders
+alias projects="cd ~/projects"
+alias dotfiles="cd ~/projects/dotfiles"
+
+# Luna Projects
+alias lunapfb="cd ~/projects/luna-project/patient-forms-backend"
+alias lunapff="cd ~/projects/luna-project/patient-forms-frontend"
+alias lunacfb="cd ~/projects/luna-project/therapist-credentialing-backend"
+alias lunacff="cd ~/projects/luna-project/therapist-credentialing-frontend"
+alias lunadashboard="cd ~/projects/luna-project/clinical-dashboard-backend"
 
 # Git
 alias gst="git status"
@@ -58,6 +67,7 @@ alias bi="bundle install"
 alias rdbm="rails db:migrate"
 alias rserv="rails server"
 alias rrou="rails routes"
+alias rcon="rails console"
 
 # Docker
 alias dc="docker-compose"

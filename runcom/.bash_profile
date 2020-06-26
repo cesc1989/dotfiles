@@ -42,3 +42,7 @@ fi
 if [ -d "/Users/fquintero/Library/Python/2.7/bin" ]; then
   export PATH="$PATH:/Users/fquintero/Library/Python/2.7/bin"
 fi
+
+# Make gpg commit signing work or evade problems
+# See https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)

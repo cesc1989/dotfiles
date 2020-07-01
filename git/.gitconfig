@@ -44,3 +44,7 @@
   cmd = subl --wait --diff $LOCAL $REMOTE
 [gpg]
   program = /usr/local/bin/gpg
+[commit]
+  gpgSign = true
+[tag]
+  gpgSign = true

@@ -46,12 +46,12 @@ alias gpruneorigin="git remote prune origin"
 
 # Git Log
 alias glg="git log --graph"
-alias glg_graphed='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
 alias glol="git log -n"
+alias glone="git log --oneline"
 
 # Git Stash
-alias gsthl="git stash list"
-alias gsthp="git stash pop"
+alias gstashl="git stash list"
+alias gsthashp="git stash pop"
 
 # Vagrant
 alias vst="vagrant status"

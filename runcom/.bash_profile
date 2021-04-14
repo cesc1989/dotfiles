@@ -46,3 +46,18 @@ fi
 # Make gpg commit signing work or evade problems
 # See https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
+
+setaws() {
+  if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    echo "Example: setaws name"
+  else
+    echo "Exporting aws profiles to: $1"
+    export AWS_PROFILE=$1
+    echo "export AWS_PROFILE=$1"
+    export AWS_DEFAULT_PROFILE=$1
+    echo "export AWS_DEFAULT_PROFILE=$1"
+    export AWS_SDK_LOAD_CONFIG=1
+  fi
+}

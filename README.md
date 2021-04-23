@@ -26,6 +26,7 @@ On Linux Mint:
 ```bash
 $ ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
 $ ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitconfig" ~
+$ ln -sv "/home/$(whoami)/projects/dotfiles/rails/.railsrc" ~
 ```
 
 On macOS:
@@ -33,6 +34,7 @@ On macOS:
 ```bash
 $ ln -sv "/Users/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
 $ ln -sv "/Users/$(whoami)/projects/dotfiles/git/.gitconfig" ~
+$ ln -sv "/Users/$(whoami)/projects/dotfiles/rails/.railsrc" ~
 ```
 
 Add the following snippet in `~/.profile`:

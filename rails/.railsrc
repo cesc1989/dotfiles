@@ -1,0 +1,11 @@
+--skip-action-mailer
+--skip-action-mailbox
+--skip-action-text
+--skip-active-storage
+--skip-action-cable
+--skip-system-test
+--skip-javascript
+--skip-test
+--skip-listen
+--skip-bootsnap
+--template=~/projects/devaspros-projects/puntapie/template.rb

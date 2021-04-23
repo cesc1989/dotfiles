@@ -3,7 +3,6 @@
 --skip-active-storage
 --skip-action-cable
 --skip-system-test
---skip-javascript
 --skip-test
 --skip-listen
 --skip-bootsnap

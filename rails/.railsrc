@@ -1,6 +1,5 @@
 --skip-action-mailbox
 --skip-action-text
---skip-active-storage
 --skip-system-test
 --skip-test
 --skip-listen

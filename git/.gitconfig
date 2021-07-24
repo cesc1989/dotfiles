@@ -1,6 +1,9 @@
 [user]
   email = frajaquico@yahoo.es
   name  = Francisco Quintero Coronell
+  # IW MBP key
+  # signingkey = 6B6E024D8276BC8A
+  # Linux Mint 20.1 key
   signingkey = 334B4A578C1E12AF
 [alias]
   st   = status
@@ -43,7 +46,10 @@
 [difftool "subl"]
   cmd = subl --wait --diff $LOCAL $REMOTE
 [gpg]
-	program = /usr/bin/gpg
+  # IW MBP path
+  # program = /usr/local/bin/gpg
+  # Linux Mint 20.1 path
+  program = /usr/bin/gpg
 [commit]
   gpgSign = true
 [tag]

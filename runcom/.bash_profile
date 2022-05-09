@@ -67,3 +67,7 @@ setaws() {
     export AWS_SDK_LOAD_CONFIG=1
   fi
 }
+
+if [ -d "/home/cesc/Postman" ]; then
+  export PATH=$HOME/Postman:$PATH
+fi

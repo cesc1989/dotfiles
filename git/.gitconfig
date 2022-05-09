@@ -2,7 +2,7 @@
   email = frajaquico@yahoo.es
   name  = Francisco Quintero Coronell
   # IW MBP key
-  signingkey = 6B6E024D8276BC8A
+  # signingkey = 6B6E024D8276BC8A
 [alias]
   st   = status
   a    = add
@@ -45,10 +45,10 @@
   cmd = subl --wait --diff $LOCAL $REMOTE
 [gpg]
   # IW MBP path
-  program = /usr/local/bin/gpg
+  # program = /usr/local/bin/gpg
 [commit]
   gpgSign = true
 [tag]
   gpgSign = true
-# [includeIf "gitdir:/Users/fquintero/projects/"]
-#   path = .gitconfig.work
+[includeIf "gitdir:/Users/fquintero/projects/"]
+  path = ~/projects/dotfiles/git/.gitconfig.work

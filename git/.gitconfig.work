@@ -1,0 +1,6 @@
+[user]
+  # IW MBP key
+  signingkey = 6B6E024D8276BC8A
+[gpg] 
+  # IW MBP path
+  program = /usr/local/bin/gpg

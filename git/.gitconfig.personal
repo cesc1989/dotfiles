@@ -1,0 +1,6 @@
+[user]
+  # Linux Mint 20.1 key
+  signingkey = 334B4A578C1E12AF
+[gpg] 
+  # Linux Mint 20.1 path
+  program = /usr/bin/gpg

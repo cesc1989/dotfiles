@@ -9,6 +9,7 @@ alias h="history"
 alias reload="source ~/.profile"
 alias os_version="lsb_release -d"
 alias 64bit="getconf LONG_BIT"
+alias reclear="reload && clear"
 
 # Folders
 alias projects="cd ~/projects"

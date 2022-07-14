@@ -10,7 +10,7 @@ alias reload="source ~/.profile"
 alias os_version="lsb_release -d"
 alias 64bit="getconf LONG_BIT"
 alias reclear="reload && clear"
-alias loadgh="ssh-add ~/.ssh/gh_iw"
+alias loadgithub="ssh-add ~/.ssh/gh_iw"
 
 # Folders
 alias projects="cd ~/projects"

@@ -17,10 +17,8 @@ alias projects="cd ~/projects"
 alias dotfiles="cd ~/projects/dotfiles"
 
 # Luna Projects
-alias lunapfb="cd ~/projects/luna-project/patient-forms-backend"
-alias lunapff="cd ~/projects/luna-project/patient-forms-frontend"
-alias lunacfb="cd ~/projects/luna-project/therapist-credentialing-backend"
-alias lunacff="cd ~/projects/luna-project/therapist-credentialing-frontend"
+alias lunaforms="cd ~/projects/luna-project/patient-forms-backend"
+alias lunacredentialing="cd ~/projects/luna-project/therapist-credentialing-backend"
 alias lunadashboard="cd ~/projects/luna-project/clinical-dashboard-backend"
 
 # Git
@@ -45,6 +43,9 @@ alias gpl="git pull"
 alias gf="git fetch"
 alias grso="git remote show origin"
 alias gpruneorigin="git remote prune origin"
+
+# Hub
+alias hpr="hub pull-request -c"
 
 # Git Log
 alias glg="git log --graph"
@@ -82,7 +83,6 @@ alias hku="heroku"
 alias hkuapps="heroku apps"
 alias hkurun="heroku run"
 
-# Other
-# alias aliases="cat $HOME/.aliases"
-alias stagingconsole="~/projects/scripts/staging_console.sh"
-alias stagingconsolerails="~/projects/scripts/staging_console_rails.sh"
+# Containers in Cloud
+alias loginalpha="~/projects/scripts/x_task.sh -p alpha"
+alias loginbeta="~/projects/scripts/x_task.sh -p beta"

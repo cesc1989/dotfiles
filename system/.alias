@@ -83,6 +83,10 @@ alias hku="heroku"
 alias hkuapps="heroku apps"
 alias hkurun="heroku run"
 
-# Containers in Cloud
+# Containers and Cloud
 alias loginalpha="~/projects/scripts/x_task.sh -p alpha"
 alias loginbeta="~/projects/scripts/x_task.sh -p beta"
+
+alias awsloginalpha="aws sso login --profile alpha"
+alias awsloginbeta="aws sso login --profile beta"
+alias awsloginomega="aws sso login --profile omega"

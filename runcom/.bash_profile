@@ -6,9 +6,9 @@ for DOTFILE in $HOME/projects/dotfiles/system/.{alias,prompt}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 
-# -f is for regular files
-# those that can be created with `touch` command
+## Load git autocompletion script
 #
+# -f is for regular files. Those that can be created with `touch` command
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 
@@ -28,12 +28,15 @@ if [ -f ~/.git-completion.bash ]; then
   __git_complete gf _git_fetch
 fi
 
+## Load NVM - Node Version Manager
+#
 # -d is for directories
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
 
   # This loads nvm
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
   # This loads nvm bash_completion
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
@@ -44,10 +47,11 @@ if [ -d "/Users/fquintero/Library/Python/2.7/bin" ]; then
 fi
 
 # Make gpg commit signing work or evade problems
+#
 # See https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
-# Useful for changing between several AWS accounts configured in `~/.aws/credentials`.
+# To change between several AWS accounts configured in `~/.aws/credentials`
 #
 # Examples:
 #
@@ -68,8 +72,19 @@ setaws() {
   fi
 }
 
+# Make Postman available via command line
+#
+# This is for Linux Mint personal computer
 if [ -d "/home/cesc/Postman" ]; then
   export PATH=$HOME/Postman:$PATH
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session as a function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Load Image Magick
+#
+# This is for macos Ventura
+if [ -d "/opt/homebrew/opt/imagemagick@6/bin" ]; then
+  export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+fi

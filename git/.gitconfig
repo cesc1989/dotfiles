@@ -45,8 +45,8 @@
   # IW MBP path. See .gitconfig.work
   # Personal path. See .gitconfig.personal
 [commit]
-  gpgSign = true
+  gpgSign = false
 [tag]
-  gpgSign = true
+  gpgSign = false
 [includeIf "gitdir:/Users/fquintero/projects/"]
   path = ~/projects/dotfiles/git/.gitconfig.work

@@ -3,4 +3,5 @@
   signingkey = 6B6E024D8276BC8A
 [gpg] 
   # IW MBP path
-  program = /usr/local/bin/gpg
+  #program = /usr/local/bin/gpg
+  program = /opt/homebrew/bin/gpg

@@ -88,3 +88,9 @@ fi
 if [ -d "/opt/homebrew/opt/imagemagick@6/bin" ]; then
   export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
 fi
+
+# Load Hub bash completion script
+if [ -f ~/hub.bash_completion.sh ]; then
+  echo "aqui estoy"
+  . ~/hub.bash_completion.sh
+fi

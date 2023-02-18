@@ -80,7 +80,15 @@ if [ -d "/home/cesc/Postman" ]; then
 fi
 
 # Load RVM into a shell session as a function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Load chruby
+if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+
+  chruby ruby-2.7.7
+fi
 
 # Load Image Magick
 #

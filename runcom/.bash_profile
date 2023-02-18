@@ -91,6 +91,5 @@ fi
 
 # Load Hub bash completion script
 if [ -f ~/hub.bash_completion.sh ]; then
-  echo "aqui estoy"
   . ~/hub.bash_completion.sh
 fi

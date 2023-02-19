@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Disable brackted paste mode.
+# See https://cirw.in/blog/bracketed-paste
 printf '\e[?2004l'
 
 # Shell prompt based on the Solarized Dark theme.

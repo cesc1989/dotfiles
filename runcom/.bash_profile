@@ -41,9 +41,14 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
 
-# This is for the IW MBP - macOS Mojave
-if [ -d "/Users/fquintero/Library/Python/2.7/bin" ]; then
+# This is for macOS Mojave
+if [ -d "$HOME/Library/Python/2.7/bin" ]; then
   export PATH="$PATH:/Users/fquintero/Library/Python/2.7/bin"
+fi
+
+# This is for macOS Ventura (v13)
+if [ -d "$(pyenv root)/shims" ]; then
+  export PATH="$(pyenv root)/shims:${PATH}"
 fi
 
 # Make gpg commit signing work or evade problems

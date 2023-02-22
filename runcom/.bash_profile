@@ -92,7 +92,7 @@ if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
   source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
   source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 
-  chruby ruby-2.7.7
+  chruby ruby-3.0.2
 fi
 
 # Load Image Magick

@@ -2,6 +2,7 @@
 
 # See webpro installation script: https://github.com/webpro/dotfiles/blob/master/runcom/.bash_profile
 
+# Load all current dotfiles
 for DOTFILE in $HOME/projects/dotfiles/system/.{alias,prompt}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
@@ -34,21 +35,23 @@ fi
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
 
-  # This loads nvm
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-  # This loads nvm bash_completion
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
 
+# Load Python 2 - for node-sass
+#
 # This is for macOS Mojave
 if [ -d "$HOME/Library/Python/2.7/bin" ]; then
   export PATH="$PATH:/Users/fquintero/Library/Python/2.7/bin"
 fi
 
+# Load pyenv
+#
 # This is for macOS Ventura (v13)
-if [ -d "$(pyenv root)/shims" ]; then
-  export PATH="$(pyenv root)/shims:${PATH}"
+if [ -d "$HOME/.pyenv/shims" ]; then
+  export PATH="$HOME/.pyenv/shims:${PATH}"
 fi
 
 # Make gpg commit signing work or evade problems
@@ -89,10 +92,10 @@ fi
 
 # Load chruby
 if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
+  # chruby ruby-3.0.2
+
   source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
   source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-
-  chruby ruby-3.0.2
 fi
 
 # Load Image Magick

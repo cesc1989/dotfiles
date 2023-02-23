@@ -41,6 +41,6 @@ Add the following snippet in `~/.profile`:
 
 ```bash
 if [ -f "$HOME/.bash_profile" ]; then
-. "$HOME/.bash_profile"
+  . "$HOME/.bash_profile"
 fi
 ```

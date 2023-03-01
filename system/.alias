@@ -90,3 +90,7 @@ alias beta_container="~/projects/scripts/x_task.sh -p beta"
 alias awsloginalpha="aws sso login --profile alpha"
 alias awsloginbeta="aws sso login --profile beta"
 alias awsloginomega="aws sso login --profile omega"
+
+# AWS stuff
+alias s3ls="aws s3 ls"
+alias s3cp="aws s3 cp"

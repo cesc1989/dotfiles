@@ -59,24 +59,19 @@ fi
 # See https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
-# To change between several AWS accounts configured in `~/.aws/credentials`
+# To change between several AWS accounts configured in `~/.aws/config`
 #
-# Examples:
+# Example:
 #
-#    $ setaws staging
-#    $ setaws uat
+#    $ setaws alpha
 setaws() {
   if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
-    echo "Example: setaws staging"
+    echo "Example: setaws alpha"
   else
     echo "Exporting aws profiles to: $1"
     export AWS_PROFILE=$1
-    echo "export AWS_PROFILE=$1"
-    export AWS_DEFAULT_PROFILE=$1
-    echo "export AWS_DEFAULT_PROFILE=$1"
-    export AWS_SDK_LOAD_CONFIG=1
   fi
 }
 

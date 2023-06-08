@@ -91,6 +91,9 @@ alias awsloginalpha="aws sso login --profile alpha"
 alias awsloginbeta="aws sso login --profile beta"
 alias awsloginomega="aws sso login --profile omega"
 
+alias alphalogspatients="~/projects/scripts/x_logs.sh alpha service patient-self-report 15m"
+alias alphalogstherapists="~/projects/scripts/x_logs.sh alpha service therapist-signup 15m"
+
 # AWS stuff
 alias s3ls="aws s3 ls"
 alias s3cp="aws s3 cp"

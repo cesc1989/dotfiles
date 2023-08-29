@@ -104,3 +104,8 @@ fi
 if [ -f ~/hub.bash_completion.sh ]; then
   . ~/hub.bash_completion.sh
 fi
+
+# Load logcli for Luna x_logs script
+if [ -d "$HOME/log-cli" ]; then
+  export PATH="$HOME/log-cli:$PATH"
+fi

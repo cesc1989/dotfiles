@@ -90,6 +90,7 @@ alias beta_container="~/projects/scripts/x_task.sh -p beta"
 alias alpha_patient_forms_container="~/projects/scripts/x_task.sh -p alpha -s patient-self-report sh"
 alias alpha_credentialing_container="~/projects/scripts/x_task.sh -p alpha -s therapist-signup sh"
 alias alpha_provider_portal_container="~/projects/scripts/x_task.sh -p alpha -s provider-portal sh"
+alias alpha_edge_container="~/projects/scripts/x_task.sh -p alpha -s edge sh"
 
 alias awsloginalpha="aws sso login --profile alpha"
 alias awsloginbeta="aws sso login --profile beta"

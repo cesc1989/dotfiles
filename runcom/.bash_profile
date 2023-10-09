@@ -40,6 +40,10 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
 
+####
+## PYTHON STUFF
+####
+
 # Load Python 2 - for node-sass
 #
 # This is for macOS Mojave
@@ -53,6 +57,15 @@ fi
 if [ -d "$HOME/.pyenv/shims" ]; then
   export PATH="$HOME/.pyenv/shims:${PATH}"
 fi
+
+# Load pipenv
+#
+# As explained here https://pipenv.pypa.io/en/latest/installation/#preferred-installation-of-pipenv
+export PATH="$HOME/.local/bin:${PATH}"
+
+####
+## END PYTHON STUFF
+####
 
 # Make gpg commit signing work or evade problems
 #

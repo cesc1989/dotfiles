@@ -79,17 +79,16 @@ alias alpha_edge_container="~/projects/scripts/x_task.sh -p alpha -s edge sh"
 alias alpha_marketplace_container="~/projects/scripts/x_task.sh -p alpha -s marketplace sh"
 
 # Logs
-
 alias alphalogspatients="~/projects/scripts/x_logs.sh alpha service patient-self-report 15m"
 alias alphalogstherapists="~/projects/scripts/x_logs.sh alpha service therapist-signup 15m"
 
 # Generate Dumps
 alias alpha_patient_forms_generate_dump="~/projects/scripts/x_make_dev_db.sh alpha patient-self-report"
-
+alias alpha_edge_generate_dump="~/projects/scripts/x_make_dev_db.sh alpha edge"
 alias alpha_marketplace_generate_dump="~/projects/scripts/x_make_dev_db.sh alpha marketplace"
 
 # Get dump access
-alias alpha_creds="~/projects/scripts/x_rds_dev_creds.sh alpha"
+alias alpha_dump_creds="~/projects/scripts/x_rds_dev_creds.sh alpha"
 
 # AWS stuff
 alias s3ls="aws s3 ls"

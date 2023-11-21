@@ -122,3 +122,9 @@ fi
 if [ -d "$HOME/log-cli" ]; then
   export PATH="$HOME/log-cli:$PATH"
 fi
+
+# Luna CLI configuration
+if [ -d "$HOME/bin" ]; then
+  export PATH="$HOME/bin/:$PATH"
+  [[ \$commands[luna] ]] && source <(luna completion bash)
+fi

@@ -19,7 +19,9 @@ alias dotfiles="cd ~/projects/dotfiles"
 # Luna Projects
 alias lunaforms="cd ~/projects/luna-project/patient-forms-backend"
 alias lunacredentialing="cd ~/projects/luna-project/therapist-credentialing-backend"
-alias lunadashboard="cd ~/projects/luna-project/clinical-dashboard-backend"
+alias lunadashboard="cd ~/projects/luna-project/provider-portal"
+alias lunamarketplace="cd ~/projects/luna-project/marketplace"
+alias lunabackend="cd ~/projects/luna-project/backend"
 
 # Git
 alias gst="git status"
@@ -34,8 +36,6 @@ alias gb="git branch"
 alias gbd="git branch -d"
 alias gcob="git checkout -b"
 alias gco="git checkout"
-alias gmrg="git merge"
-alias grbs="git rebase"
 
 # Git Remotes
 alias gps="git push"
@@ -83,9 +83,9 @@ alias alphalogspatients="~/projects/scripts/x_logs.sh alpha service patient-self
 alias alphalogstherapists="~/projects/scripts/x_logs.sh alpha service therapist-signup 15m"
 
 # Generate Dumps
-alias alpha_patient_forms_generate_dump="~/projects/scripts/x_make_dev_db.sh alpha patient-self-report"
-alias alpha_edge_generate_dump="~/projects/scripts/x_make_dev_db.sh alpha edge"
-alias alpha_marketplace_generate_dump="~/projects/scripts/x_make_dev_db.sh alpha marketplace"
+alias alpha_patient_forms_generate_dump="luna rds create-dev-db -p alpha -d patient-self-report"
+alias alpha_edge_generate_dump="luna rds create-dev-db -p alpha -d edge"
+alias alpha_marketplace_generate_dump="luna rds create-dev-db -p alpha -d marketplace"
 
 # Get dump access
 alias alpha_dump_creds="~/projects/scripts/x_rds_dev_creds.sh alpha"

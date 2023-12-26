@@ -63,9 +63,9 @@ alias vdestroyf="vagrant destroy -f"
 # Ruby on Rails
 alias be="bundle exec"
 alias bi="bundle install"
-alias rdbm="rails db:migrate"
-alias rserv="rails server"
-alias rcon="rails console"
+alias rdbm="bundle exec rails db:migrate"
+alias rserv="bundle exec rails server"
+alias rcon="bundle exec rails console"
 
 # Containers
 alias alpha_container="~/projects/scripts/x_task.sh -p alpha"

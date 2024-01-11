@@ -97,3 +97,7 @@ alias s3cp="aws s3 cp"
 alias awsloginalpha="aws sso login --profile alpha"
 alias awsloginbeta="aws sso login --profile beta"
 alias awsloginomega="aws sso login --profile omega"
+
+# Other
+
+alias dap_server="ssh cashflow"

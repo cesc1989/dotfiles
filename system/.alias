@@ -66,6 +66,7 @@ alias bi="bundle install"
 alias rdbm="bundle exec rails db:migrate"
 alias rserv="bundle exec rails server"
 alias rcon="bundle exec rails console"
+alias pruebas="bundle exec rspec"
 
 # Containers
 alias alpha_container="~/projects/scripts/x_task.sh -p alpha"

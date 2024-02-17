@@ -1,0 +1,42 @@
+## Work Projects navigation
+#
+alias lunaforms="cd ~/projects/luna-project/patient-forms-backend"
+alias lunacredentialing="cd ~/projects/luna-project/therapist-credentialing-backend"
+alias lunadashboard="cd ~/projects/luna-project/provider-portal"
+alias lunamarketplace="cd ~/projects/luna-project/marketplace"
+alias lunabackend="cd ~/projects/luna-project/backend"
+
+## Containers Base Command
+#
+alias alpha_container="~/projects/scripts/x_task.sh -p alpha"
+alias beta_container="~/projects/scripts/x_task.sh -p beta"
+
+## Container Full Command
+#
+alias alpha_patient_forms_container="~/projects/scripts/x_task.sh -p alpha -s patient-self-report sh"
+alias alpha_credentialing_container="~/projects/scripts/x_task.sh -p alpha -s therapist-signup sh"
+alias alpha_provider_portal_container="~/projects/scripts/x_task.sh -p alpha -s provider-portal sh"
+
+alias alpha_edge_container="~/projects/scripts/x_task.sh -p alpha -s edge sh"
+alias alpha_marketplace_container="~/projects/scripts/x_task.sh -p alpha -s marketplace sh"
+
+## Logs
+#
+alias alphalogspatients="~/projects/scripts/x_logs.sh alpha service patient-self-report 15m"
+alias alphalogstherapists="~/projects/scripts/x_logs.sh alpha service therapist-signup 15m"
+
+## Generate Dumps
+#
+alias alpha_patient_forms_generate_dump="luna rds create-dev-db -p alpha -d patient-self-report"
+alias alpha_edge_generate_dump="luna rds create-dev-db -p alpha -d edge"
+alias alpha_marketplace_generate_dump="luna rds create-dev-db -p alpha -d marketplace"
+
+## Get dump access
+#
+alias alpha_dump_creds="~/projects/scripts/x_rds_dev_creds.sh alpha"
+
+## AWS
+#
+alias awsloginalpha="aws sso login --profile alpha"
+alias awsloginbeta="aws sso login --profile beta"
+alias awsloginomega="aws sso login --profile omega"

@@ -3,7 +3,7 @@
 # See webpro installation script: https://github.com/webpro/dotfiles/blob/master/runcom/.bash_profile
 
 # Load all current dotfiles
-for DOTFILE in $HOME/projects/dotfiles/system/.{alias,prompt}; do
+for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 
@@ -98,7 +98,7 @@ fi
 # Load RVM into a shell session as a function
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Load chruby
+# Load chruby in macos M1 Ventura
 if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
   # chruby ruby-3.0.2
 
@@ -137,4 +137,5 @@ if [ -d "$HOME/.asdf" ]; then
   . "$HOME/.asdf/completions/asdf.bash"
 fi
 
+# Grimoire stuff
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-threads --enable-kernel-poll --enable-wx --enable-webview --enable-darwin-64bit --enable-gettimeofday-as-os-system-time"

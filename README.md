@@ -8,7 +8,6 @@ Took ideas from:
 - [Pedro Fernandez](https://github.com/pedrofernandezm/dotfiles)
 - [Web Pro](https://github.com/webpro/dotfiles)
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
-- [Getting Started with Dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
 
 ## Installation
 

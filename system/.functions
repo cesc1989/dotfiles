@@ -1,0 +1,8 @@
+## Explore Therapist Signup Bucket
+#
+# s3ls luna-alpha-workloads-therapist-signup/UUID
+function alpha_signup_files() {
+  setaws alpha
+
+  s3ls "luna-alpha-workloads-therapist-signup/$1/"
+}

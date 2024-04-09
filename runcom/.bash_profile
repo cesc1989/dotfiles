@@ -3,7 +3,7 @@
 # See webpro installation script: https://github.com/webpro/dotfiles/blob/master/runcom/.bash_profile
 
 # Load all current dotfiles
-for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases}; do
+for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases,functions}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 

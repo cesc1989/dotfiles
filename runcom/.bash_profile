@@ -95,15 +95,20 @@ if [ -d "/home/cesc/Postman" ]; then
   export PATH=$HOME/Postman:$PATH
 fi
 
-# Load RVM into a shell session as a function
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Load chruby in macos M1 Ventura
+#
 if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
   # chruby ruby-3.0.2
 
   source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
   source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+fi
+
+# Load chruby in Linux Mint
+#
+if [ -d "/usr/local/share/chruby/" ]; then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
 fi
 
 # Load Image Magick

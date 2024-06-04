@@ -1,45 +1,49 @@
 # Personal Dotfiles
 
-My dotfiles. Should work on _*nix_ systems although are created in Linux Mint 19(Ubuntu 18.04).
-
-Took ideas from:
+Mis dotfiles. Tomé ideas de estos otros:
 
 - [Tute](https://github.com/tute/dotfiles)
 - [Pedro Fernandez](https://github.com/pedrofernandezm/dotfiles)
 - [Web Pro](https://github.com/webpro/dotfiles)
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 
-## Installation
+## Instalación
 
-Clone this repo:
+Clone este repo:
 
 ```bash
 $ cd ~/projects
 $ git clone https://github.com/cesc1989/dotfiles
 ```
 
-Symlink files to `$HOME` folder.
+Crea un enlace simbólico a la carpeta `$HOME`.
 
-On Linux Mint:
-
-```bash
-$ ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
-$ ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitconfig" ~
-$ ln -sv "/home/$(whoami)/projects/dotfiles/rails/.railsrc" ~
-```
-
-On macOS:
+En Linux Mint:
 
 ```bash
-$ ln -sv "/Users/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
-$ ln -sv "/Users/$(whoami)/projects/dotfiles/git/.gitconfig" ~
-$ ln -sv "/Users/$(whoami)/projects/dotfiles/rails/.railsrc" ~
+ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
+ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitconfig" ~
+ln -sv "/home/$(whoami)/projects/dotfiles/rails/.railsrc" ~
 ```
 
-Add the following snippet in `~/.profile`:
+En macOS:
+
+```bash
+ln -sv "/Users/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
+ln -sv "/Users/$(whoami)/projects/dotfiles/git/.gitconfig" ~
+ln -sv "/Users/$(whoami)/projects/dotfiles/rails/.railsrc" ~
+```
+
+Añade esto en el archivo `~/.profile`:
 
 ```bash
 if [ -f "$HOME/.bash_profile" ]; then
   . "$HOME/.bash_profile"
 fi
 ```
+
+### Configuración de Terminal en Linux Mint
+
+La terminal de Linux Mint no lee el archivo `.profile` a menos que se le indique como se muestra en la imagen.
+
+![configuracion terminal en linux mint](./images/config.terminal.dotfiles.png)

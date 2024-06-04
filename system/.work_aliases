@@ -41,3 +41,7 @@ alias alpha_dump_creds="~/projects/scripts/x_rds_dev_creds.sh alpha"
 #
 alias awsloginalpha="aws sso login --profile alpha"
 alias awsloginomega="aws sso login --profile omega"
+
+## Zellij
+#
+alias ztwopanes="zellij --layout two_panes"

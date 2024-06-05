@@ -1,0 +1,23 @@
+// Este layout es para proyectos de dos repos.
+//
+// Un repo para backend y otro para frontend. En este caso, Therapist Signup.
+//
+layout {
+  tab name="therapist_backend" focus=true {
+    pane size=2 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane split_direction="vertical" {
+        pane
+        pane
+    }
+  }
+
+  tab name="therapist_frontend" cwd="~/projects/luna-project/therapist-credentialing-frontend" {
+    pane size=2 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+
+    pane
+  }
+}

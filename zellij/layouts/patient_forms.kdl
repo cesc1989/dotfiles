@@ -1,0 +1,23 @@
+// Este layout es para proyectos de dos repos.
+//
+// Un repo para backend y otro para frontend. En este caso, patient self report.
+//
+layout {
+  tab name="forms_backend" focus=true {
+    pane size=2 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane split_direction="vertical" {
+        pane
+        pane
+    }
+  }
+
+  tab name="forms_frontend" cwd="~/projects/luna-project/patient-forms-frontend" {
+    pane size=2 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+
+    pane
+  }
+}

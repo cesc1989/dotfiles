@@ -44,4 +44,6 @@ alias awsloginomega="aws sso login --profile omega"
 
 ## Zellij
 #
+alias zetwopanes="zellij --layout two_panes"
 alias zeforms="zellij --layout patient_forms"
+alias zetherapist="zellij --layout therapist_signup"

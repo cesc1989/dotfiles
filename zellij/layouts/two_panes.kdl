@@ -1,0 +1,10 @@
+// Layout para proyectos de un solo repo.
+//
+// En ese tipo de proyectos no necesito dos repos diferentes.
+//
+layout {
+  pane split_direction="vertical" {
+    pane
+    pane
+  }
+}

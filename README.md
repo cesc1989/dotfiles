@@ -42,8 +42,34 @@ if [ -f "$HOME/.bash_profile" ]; then
 fi
 ```
 
-### Configuración de Terminal en Linux Mint
+## Configuración de Terminal en Linux Mint
 
 La terminal de Linux Mint no lee el archivo `.profile` a menos que se le indique como se muestra en la imagen.
 
 ![configuracion terminal en linux mint](./images/config.terminal.dotfiles.png)
+
+## Zellij
+
+Para [Zellij](https://zellij.dev/documentation/introduction) hay que configurar el archivo `.bashrc` para poder cargar la configuración de mis dotfiles y además hacer un enlace símbolico para los layouts.
+
+### bashrc
+
+Dado a que Zellij no lanza una shell como usuario, hay que cargar la configuración de `.bash_profile` en `.bashrc`.
+
+```bash
+if [ -f "$HOME/.bash_profile" ]; then
+  . "$HOME/.bash_profile"
+fi
+```
+
+### Layouts
+
+Asegura que la carpeta `~/.config/zellij/layouts` exista y luego haz un enlace símbolico de los archivos de layouts que están en este proyecto.
+
+En macos:
+
+```bash
+ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
+ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/patient_forms.kdl" ~/.config/zellij/layouts/patient_forms.kdl
+ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/therapist_signup.kdl" ~/.config/zellij/layouts/therapist_signup.kdl
+```

@@ -72,4 +72,5 @@ En macos:
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/patient_forms.kdl" ~/.config/zellij/layouts/patient_forms.kdl
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/therapist_signup.kdl" ~/.config/zellij/layouts/therapist_signup.kdl
+ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/dashboard_edge_marketplace.kdl" ~/.config/zellij/layouts/dashboard_edge_marketplace.kdl
 ```

@@ -1,0 +1,29 @@
+// Este layout es para el resto proyectos.
+//
+// Clinical Dashboard, Edge y Marketplace.
+//
+layout {
+  tab name="clinical_dashboard" focus=true cwd="~/projects/luna-project/provider-portal" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane
+  }
+
+  tab name="edge" cwd="~/projects/luna-project/backend" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane
+  }
+
+  tab name="marketplace" cwd="~/projects/luna-project/marketplace" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane
+  }
+}

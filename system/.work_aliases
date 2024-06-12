@@ -16,7 +16,7 @@ alias alpha_patient_forms_container="~/projects/scripts/x_task.sh -p alpha -s pa
 alias alpha_therapist_signup_container="~/projects/scripts/x_task.sh -p alpha -s therapist-signup sh"
 alias alpha_provider_portal_container="~/projects/scripts/x_task.sh -p alpha -s provider-portal sh"
 
-alias alpha_edge_container="~/projects/scripts/x_task.sh -p alpha -s edge sh"
+alias alpha_edge_container="luna ecs connect --profile alpha --service alpha-service-edge"
 alias alpha_marketplace_container="~/projects/scripts/x_task.sh -p alpha -s marketplace sh"
 
 ## Logs

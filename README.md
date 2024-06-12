@@ -74,3 +74,15 @@ ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/patient_forms.kdl" ~/.
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/therapist_signup.kdl" ~/.config/zellij/layouts/therapist_signup.kdl
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/dashboard_edge_marketplace.kdl" ~/.config/zellij/layouts/dashboard_edge_marketplace.kdl
 ```
+
+## Hammerspoon - Solo macOS
+
+Necesario tener instalado [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) y [Hammerspoon](http://www.hammerspoon.org/).
+
+Esta es una herramienta para atajos de teclado mediante scripts escritos en Lua.
+
+Para activarlos hay que acer el enlace simbólico:
+
+```bash
+ln -sv "/Users/$(whoami)/projects/dotfiles/hammerspoon/init.lua" ~/.hammerspoon/init.lua
+```

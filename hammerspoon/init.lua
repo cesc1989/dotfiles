@@ -46,3 +46,7 @@ end)
 hyper:bind({}, "D", function()
   hs.application.launchOrFocus("DBeaver")
 end)
+
+hyper:bind({}, "P", function()
+  hs.application.launchOrFocus("Postman")
+end)

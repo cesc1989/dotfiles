@@ -5,17 +5,18 @@
 layout {
   tab name="therapist_backend" focus=true {
     pane size=2 borderless=true {
-        plugin location="zellij:tab-bar"
+      plugin location="zellij:tab-bar"
     }
+
     pane split_direction="vertical" {
-        pane
-        pane
+      pane
+      pane
     }
   }
 
   tab name="therapist_frontend" cwd="~/projects/luna-project/therapist-credentialing-frontend" {
     pane size=2 borderless=true {
-        plugin location="zellij:tab-bar"
+      plugin location="zellij:tab-bar"
     }
 
     pane

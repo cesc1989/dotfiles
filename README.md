@@ -1,11 +1,6 @@
 # Personal Dotfiles
 
-Mis dotfiles. Tomé ideas de estos otros:
-
-- [Tute](https://github.com/tute/dotfiles)
-- [Pedro Fernandez](https://github.com/pedrofernandezm/dotfiles)
-- [Web Pro](https://github.com/webpro/dotfiles)
-- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
+Mis dotfiles.
 
 ## Instalación
 
@@ -86,3 +81,12 @@ Para activarlos hay que acer el enlace simbólico:
 ```bash
 ln -sv "/Users/$(whoami)/projects/dotfiles/hammerspoon/init.lua" ~/.hammerspoon/init.lua
 ```
+
+## Enlaces
+
+Tomé ideas de estos otros:
+
+- [Tute](https://github.com/tute/dotfiles)
+- [Pedro Fernandez](https://github.com/pedrofernandezm/dotfiles)
+- [Web Pro](https://github.com/webpro/dotfiles)
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)

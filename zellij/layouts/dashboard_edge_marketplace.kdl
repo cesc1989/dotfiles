@@ -38,7 +38,10 @@ layout {
       plugin location="zellij:tab-bar"
     }
 
-    pane
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
   }
 
   tab name="marketplace" cwd="~/projects/luna-project/marketplace" {
@@ -46,6 +49,9 @@ layout {
       plugin location="zellij:tab-bar"
     }
 
-    pane
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
   }
 }

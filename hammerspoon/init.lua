@@ -12,7 +12,8 @@ end
 function exitHyperMode()
   hyper:exit()
   if not hyper.triggered then
-    hs.eventtap.keyStroke({}, 'F15') -- Prefiero no usar ESCAPE para que no me cierre modales o ventanas.
+    -- See Hammerspoon keymap https://www.hammerspoon.org/docs/hs.keycodes.html#map
+    hs.eventtap.keyStroke({}, 'shift') -- Prefiero no usar ESCAPE para que no me cierre modales o ventanas.
   end
 end
 

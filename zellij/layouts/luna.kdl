@@ -1,16 +1,24 @@
-// Este layout es para el resto proyectos.
+// Este layout todos los proyectos de Luna en los que participo.
 //
-// Clinical Dashboard, Therapist Signup, Edge y Marketplace.
+// Patient Self Report, Therapist Signup, Clinical Dashboard, Edge y Marketplace.
 //
 layout {
-  tab name="clinical_dashboard" focus=true cwd="~/projects/luna-project/provider-portal" {
+  tab name="patient-self-report" focus=true cwd="~/projects/luna-project/patient-forms-backend" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
 
     pane split_direction="vertical" {
       pane
-      pane
+
+      pane {
+        pane // Este abre en la carpeta backend
+
+        pane {
+          cwd "~/projects/luna-project/patient-forms-frontend"
+        }  
+      }
+      
     }
   }
 
@@ -30,6 +38,17 @@ layout {
         }  
       }
       
+    }
+  }
+
+  tab name="clinical_dashboard" cwd="~/projects/luna-project/provider-portal" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
     }
   }
 

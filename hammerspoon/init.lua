@@ -51,3 +51,7 @@ end)
 hyper:bind({}, "P", function()
   hs.application.launchOrFocus("Postman")
 end)
+
+hyper:bind({}, "Z", function()
+  hs.application.launchOrFocus("Zed")
+end)

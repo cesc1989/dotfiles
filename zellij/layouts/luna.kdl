@@ -12,9 +12,9 @@ layout {
       pane
 
       pane {
-        pane size="75%" // Este abre en la carpeta backend
+        pane size="70%" // Este abre en la carpeta backend
 
-        pane size="25%" {
+        pane size="30%" {
           cwd "~/projects/luna-project/patient-forms-frontend"
         }  
       }
@@ -31,9 +31,9 @@ layout {
       pane
 
       pane {
-        pane size="75%" // Este abre en la carpeta backend
+        pane size="70%" // Este abre en la carpeta backend
 
-        pane size="25%" {
+        pane size="30%" {
           cwd "~/projects/luna-project/therapist-credentialing-frontend"
         }  
       }
@@ -50,9 +50,9 @@ layout {
       pane
 
       pane {
-        pane size="75%" // Este abre en la carpeta backend
+        pane size="70%" // Este abre en la carpeta backend
 
-        pane size="25%" {
+        pane size="30%" {
           cwd "~/projects/luna-project/clinical-dashboard-frontend"
         }  
       }

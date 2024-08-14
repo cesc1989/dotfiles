@@ -6,3 +6,10 @@ function alpha_signup_files() {
 
   s3ls "luna-alpha-workloads-therapist-signup/$1/"
 }
+
+## Print the installed gem version provided in the parameter
+#
+# cat_gemfile devise
+function cat_gemfile() {
+  cat Gemfile.lock | grep $1
+}

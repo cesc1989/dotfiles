@@ -55,3 +55,11 @@ end)
 hyper:bind({}, "Z", function()
   hs.application.launchOrFocus("Zed")
 end)
+
+hyper:bind({}, "J", function()
+  hs.application.launchOrFocus("Joplin")
+end)
+
+hyper:bind({}, "E", function()
+  hs.application.launchOrFocus("Finder")
+end)

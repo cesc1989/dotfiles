@@ -13,3 +13,10 @@ function alpha_signup_files() {
 function cat_gemfile() {
   cat Gemfile.lock | grep $1
 }
+
+## Log into service Pod
+#
+# alpha_service_pod forms pod_id
+function alpha_service_pod() {
+  kubectl exec -it -n $1 $1-$2 -- sh
+}

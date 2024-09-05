@@ -1,22 +1,40 @@
-## Explore Therapist Signup Bucket
+#!/usr/bin/env bash
+
+## Explore Therapist Signup Bucket in Alpha
 #
-# s3ls luna-alpha-workloads-therapist-signup/UUID
+# Use:
+#
+#     alpha_signup_files [UUID]
 function alpha_signup_files() {
   setaws alpha
 
   s3ls "luna-alpha-workloads-therapist-signup/$1/"
 }
 
-## Print the installed gem version provided in the parameter
+## Explore Therapist Signup Bucket in Omega
 #
-# cat_gemfile devise
+# Use:
+#
+#     omega_signup_files [UUID]
+function omega_signup_files() {
+  setaws omega
+
+  s3ls "luna-omega-workloads-therapist-credentialing/$1/"
+}
+
+## Print the installed gem version
+#
+# Use:
+#     cat_gemfile [GEM_NAME]
 function cat_gemfile() {
   cat Gemfile.lock | grep $1
 }
 
 ## Log into service Pod
 #
-# alpha_service_pod forms pod_id
+# Example:
+#
+#     alpha_service_pod forms [POD_ID]
 function alpha_service_pod() {
   service_name=$1
   service_id=$2
@@ -42,4 +60,15 @@ function alpha_service_pod() {
       echo -e "Valid services are:\n $valid_services"
       ;;
   esac
+}
+
+## Copy Therapist Signup files to local folder
+#
+# Use:
+#
+#     omega_copy_signup_files [UUID] [FILE_NAME]
+function omega_copy_signup_files() {
+  setaws omega
+
+  s3cp "s3://luna-omega-workloads-therapist-credentialing/$1/$2" ~/Downloads
 }

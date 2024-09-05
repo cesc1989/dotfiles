@@ -70,5 +70,5 @@ function alpha_service_pod() {
 function omega_copy_signup_files() {
   setaws omega
 
-  s3cp "s3://luna-omega-workloads-therapist-credentialing/$1/$2" ~/Downloads
+  s3cp "s3://luna-omega-workloads-therapist-credentialing/$1/$2" "$HOME/Downloads/$1/"
 }

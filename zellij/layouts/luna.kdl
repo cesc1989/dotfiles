@@ -67,11 +67,28 @@ layout {
 
     pane split_direction="vertical" {
       pane
-      pane
+
+      pane {
+        pane
+        pane
+      }
     }
   }
 
   tab name="marketplace" cwd="~/projects/luna-project/marketplace" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  // This is a tab to use when creating new git worktress. So that I don't need to
+  // create smaller panes in the current tab.
+  tab name="free" cwd="~/projects/luna-project" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

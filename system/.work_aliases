@@ -27,7 +27,7 @@ alias zeluna="zellij --layout luna"
 ## Pods
 #
 alias alpha_patient_forms_pods="kubectl get po -n patient-forms-backend"
-alias alpha_therapist_signup_pods=""
+alias alpha_therapist_signup_pods="kubectl get po -n therapist-credentialing-backend"
 alias alpha_provider_portal_pods="kubectl get po -n physician-portal"
 alias alpha_edge_pods="kubectl get po -n backend"
-alias alpha_marketplace_pods=""
+alias alpha_marketplace_pods="kubectl get po -n marketplace"

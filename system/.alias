@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ## Shell
 #
 alias l="ls"
@@ -12,6 +14,9 @@ alias os_version="lsb_release -d"
 alias 64bit="getconf LONG_BIT"
 alias reclear="reload && clear"
 alias loadgithub="ssh-add ~/.ssh/gh_iw"
+
+# No te duermas por 4 horas
+alias noteduermas="echo 'Mantendré el PC despierto por 4 horas. ctrl + c para cancelar.' && caffeinate -u -t 14400"
 
 ## Folder navigation
 #

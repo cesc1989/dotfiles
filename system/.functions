@@ -62,7 +62,7 @@ function alpha_service_pod() {
   esac
 }
 
-## Copy Therapist Signup files to local folder
+## Copy Omega Therapist Signup files to local folder
 #
 # Use:
 #
@@ -71,4 +71,20 @@ function omega_copy_signup_files() {
   setaws omega
 
   s3cp "s3://luna-omega-workloads-therapist-credentialing/$1/$2" "$HOME/Downloads/$1/"
+}
+
+## Copy Alpha Therapist Signup files to local folder
+#
+# Use:
+#
+#     alpha_copy_signup_files [UUID] [FILE_NAME]
+function alpha_copy_signup_files() {
+  setaws alpha
+
+  s3cp "s3://luna-alpha-workloads-therapist-signup/$1/$2" "$HOME/Downloads/$1/"
+}
+
+## Kills rails server on port 3000
+function matar_servidor_rails() {
+  kill -9 $(lsof -i tcp:3000 -t)
 }

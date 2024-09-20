@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ## Work Projects Navigation
 #
 alias luna_forms="cd ~/projects/luna-project/patient-forms-backend"

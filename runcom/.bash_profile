@@ -64,7 +64,52 @@ fi
 export PATH="$HOME/.local/bin:${PATH}"
 
 ####
-## END PYTHON STUFF
+## MACOS
+####
+
+# Load chruby in macos M1 Ventura
+#
+if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
+  # chruby ruby-3.0.2
+
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+fi
+
+# Load Image Magick
+#
+# This is for macos Ventura
+if [ -d "/opt/homebrew/opt/imagemagick@6/bin" ]; then
+  export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+fi
+
+# PostgreSQL@16 with Homebrew asked for this
+#
+# for macos Ventura
+if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
+  export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+fi
+
+####
+## LINUX MINT
+####
+
+# Make Postman available via command line
+#
+# This is for Linux Mint personal computer
+if [ -d "/home/cesc/Postman" ]; then
+  export PATH=$HOME/Postman:$PATH
+fi
+
+# Load chruby in Linux Mint
+#
+if [ -d "/usr/local/share/chruby/" ]; then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+fi
+
+####
+## GENERAL
 ####
 
 # Make gpg commit signing work or evade problems
@@ -87,36 +132,6 @@ setaws() {
     export AWS_PROFILE=$1
   fi
 }
-
-# Make Postman available via command line
-#
-# This is for Linux Mint personal computer
-if [ -d "/home/cesc/Postman" ]; then
-  export PATH=$HOME/Postman:$PATH
-fi
-
-# Load chruby in macos M1 Ventura
-#
-if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
-  # chruby ruby-3.0.2
-
-  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-fi
-
-# Load chruby in Linux Mint
-#
-if [ -d "/usr/local/share/chruby/" ]; then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-fi
-
-# Load Image Magick
-#
-# This is for macos Ventura
-if [ -d "/opt/homebrew/opt/imagemagick@6/bin" ]; then
-  export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
-fi
 
 # Load Hub bash completion script
 if [ -f ~/hub.bash_completion.sh ]; then
@@ -142,5 +157,10 @@ if [ -d "$HOME/.asdf" ]; then
   . "$HOME/.asdf/completions/asdf.bash"
 fi
 
-# Grimoire stuff
+# For Grimoire
+#
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-threads --enable-kernel-poll --enable-wx --enable-webview --enable-darwin-64bit --enable-gettimeofday-as-os-system-time"
+
+# Prevent when running scripts in a rails console it breaks.
+#
+export DISABLE_SPRING=true

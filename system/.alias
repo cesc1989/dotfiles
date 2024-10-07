@@ -56,6 +56,7 @@ alias hpr="hub pull-request -c"
 alias glg="git log --graph"
 alias glol="git log -n"
 alias glone="git log --oneline"
+alias glone5="git log -n 5 --oneline"
 
 ## Ruby on Rails
 #

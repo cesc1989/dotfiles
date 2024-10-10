@@ -105,14 +105,14 @@ function create_edge_local_dump() {
   port=$(echo $url | sed -E 's/^postgres:\/\/[^@]+@[^:]+:([0-9]+)\/.*$/\1/')
   dbname=$(echo $url | sed -E 's/^postgres:\/\/[^@]+@[^\/]+\/(.*)$/\1/')
 
-  output_path="~/Downloads/edge_dump_alpha_$current_date"
+  output_path="$HOME/Downloads/edge_dump_alpha_$current_date"
 
-  # echo $user
-  # echo $password
-  # echo $host
-  # echo $port
-  # echo $dbname
-  # echo $output_path
+  echo $user
+  echo $password
+  echo $host
+  echo $port
+  echo $dbname
+  echo $output_path
 
   PGPASSWORD=$password pg_dump -h $host -U $user -p $port -f $output_path $dbname
 }

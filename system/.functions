@@ -116,3 +116,16 @@ function create_edge_local_dump() {
 
   PGPASSWORD=$password pg_dump -h $host -U $user -p $port -f $output_path $dbname
 }
+
+## Restore (create) db from dumped file after running create_edge_local_dump
+#
+# Use:
+#
+#    restore_db_from_dump luna_api_development_X ~/Downloads/edge_dump_xxxx
+#
+function restore_db_from_dump() {
+  dbname=$1
+  dump_file=$2
+
+  psql $dbname --host localhost --username francisco < $dump_file
+}

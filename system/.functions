@@ -89,34 +89,6 @@ function matar_servidor_rails() {
   kill -9 $(lsof -i tcp:3000 -t)
 }
 
-## Create a local dump from remote DB URL with pg_dump
-#
-# Call the function with the connection URL as an argument:
-#
-#     create_edge_local_dump "postgres://luna_api:Z2N5a7c0M*9bAAwSImLZj*qvrBcarR@dev-francisco-alpha-edge-10-07t14-09.ctvhkhbiykgu.us-west-2.rds.amazonaws.com:5432/luna_api_staging"
-function create_edge_local_dump() {
-  url=$1
-
-  current_date=$(date +'%Y_%m_%d')
-
-  user=$(echo $url | sed -E 's/^postgres:\/\/([^:]+):.*@.*$/\1/')
-  password=$(echo $url | sed -E 's/^postgres:\/\/[^:]+:([^@]+)@.*$/\1/')
-  host=$(echo $url | sed -E 's/^postgres:\/\/[^@]+@([^:]+):.*$/\1/')
-  port=$(echo $url | sed -E 's/^postgres:\/\/[^@]+@[^:]+:([0-9]+)\/.*$/\1/')
-  dbname=$(echo $url | sed -E 's/^postgres:\/\/[^@]+@[^\/]+\/(.*)$/\1/')
-
-  output_path="$HOME/Downloads/edge_dump_alpha_$current_date"
-
-  echo $user
-  echo $password
-  echo $host
-  echo $port
-  echo $dbname
-  echo $output_path
-
-  PGPASSWORD=$password pg_dump -h $host -U $user -p $port -f $output_path $dbname
-}
-
 ## Restore (create) db from dumped file after running create_edge_local_dump
 #
 # Use:

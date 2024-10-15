@@ -7,6 +7,11 @@ for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases,functi
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 
+# Load all functions
+for FUNCTION in $HOME/projects/dotfiles/functions/*.sh; do
+  [ -f "$FUNCTION" ] && source $FUNCTION
+done
+
 ## Load git autocompletion script
 #
 # -f is for regular files. Those that can be created with `touch` command

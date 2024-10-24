@@ -8,6 +8,10 @@
 function create_local_dump_from_remote() {
   if [[ "$#" -eq 0 ]] || [[ "$1" == "-h" || "$1" == "--help" ]]; then
     echo "Usage: restore_db_from_dump -n <dump_name> -u <url>"
+    echo ""
+    echo "Important:"
+    echo "  Disable history expansion to prevent issues with ! in the password. Disable with set +H"
+    echo ""
     echo "Options:"
     echo "  -n <dump_name>    Specify the dump file name."
     echo "  -u <url>          Specify the remote URL to create the dumb from."
@@ -42,5 +46,12 @@ function create_local_dump_from_remote() {
   echo $dbname
   echo $output_path
 
-  PGPASSWORD=$password pg_dump -h $host -U $user -p $port -f $output_path $dbname
+  export PGPASSWORD="${password}"
+
+  pg_dump -h $host -U $user -p $port -f $output_path $dbname
+
+  unset PGPASSWORD
+
+  # Reactiva la expansión de historial
+  set -H
 }

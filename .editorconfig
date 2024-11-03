@@ -11,10 +11,10 @@ trim_trailing_whitespace = true
 
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{sh}]
+[*.{sh,kdl}]
 charset = utf-8
 
 # 2 space indentation
-[*.{sh}]
+[*.{sh,kdl}]
 indent_style = space
 indent_size = 2

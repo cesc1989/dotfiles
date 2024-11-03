@@ -25,6 +25,7 @@ alias awsloginomega="aws sso login --profile omega"
 #
 alias zetwopanes="zellij --layout two_panes"
 alias zeluna="zellij --layout luna"
+alias zedap="zellij --layout devaspros"
 
 ## Pods
 #

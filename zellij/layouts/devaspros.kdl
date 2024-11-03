@@ -1,0 +1,38 @@
+// Este layout todos los proyectos de DevAsPros.
+//
+// Cash Flow, CoshiNotes, Super Agenda.
+//
+layout {
+  tab name="cashflow" focus=true cwd="~/projects/devaspros-projects/cashflow" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="coshinotes" cwd="~/projects/devaspros-projects/coshinotes" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="superagenda" cwd="~/projects/devaspros-projects/superagenda" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+}

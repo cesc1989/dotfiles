@@ -1,6 +1,7 @@
 [user]
   email = frajaquico@yahoo.es
   name  = Francisco Quintero Coronell
+
 [alias]
   st   = status
   a    = add
@@ -26,27 +27,47 @@
   lg   = log --graph
   stashl = stash list
   stashp = stash pop
-[core]
-  editor = nano
+
 [push]
   # See details about this config here https://git-scm.com/docs/git-config/2.20.0#git-config-pushdefault
   default = current
+
 [core]
   editor = subl --wait
+  pager = delta
+
 [merge]
   tool = subl
+  conflictstyle = zdiff3
+
 [mergetool "subl"]
   cmd = subl --wait $MERGED
+
 [diff]
   tool = subl
+
 [difftool "subl"]
   cmd = subl --wait --diff $LOCAL $REMOTE
+
 [gpg]
   # IW MBP path. See .gitconfig.work
   # Personal path. See .gitconfig.personal
+
 [commit]
   gpgSign = false
+
 [tag]
   gpgSign = false
+
 [includeIf "gitdir:/Users/fquintero/projects/"]
   path = ~/projects/dotfiles/git/.gitconfig.work
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true # use n and N to move between diff sections
+
+  # delta detects terminal colors automatically; set one of these to disable auto-detection
+  # dark = true
+  # light = true

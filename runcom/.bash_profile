@@ -113,6 +113,10 @@ if [ -d "/usr/local/share/chruby/" ]; then
   source /usr/local/share/chruby/auto.sh
 fi
 
+if [ -d "/home/cesc/Zellij" ]; then
+  export PATH=$HOME/Zellij:$PATH
+fi
+
 ####
 ## GENERAL
 ####

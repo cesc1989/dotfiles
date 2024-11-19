@@ -32,10 +32,6 @@ hyper:bind({}, "O", function()
   hs.application.launchOrFocus("Obsidian")
 end)
 
--- hyper:bind({}, "W", function()
---   hs.application.launchOrFocus("WhatsApp")
--- end)
-
 hyper:bind({}, "S", function()
   hs.application.launchOrFocus("Sublime Text")
 end)
@@ -54,10 +50,6 @@ end)
 
 hyper:bind({}, "Z", function()
   hs.application.launchOrFocus("Zed")
-end)
-
-hyper:bind({}, "J", function()
-  hs.application.launchOrFocus("Joplin")
 end)
 
 hyper:bind({}, "E", function()

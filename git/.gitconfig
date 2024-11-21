@@ -36,6 +36,9 @@
   editor = subl --wait
   pager = delta
 
+  # Has exclusion rules for "test_models.rb" file I usually use in rails projects.
+  excludesfile = ~/.gitignore
+
 [merge]
   tool = subl
   conflictstyle = zdiff3

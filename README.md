@@ -81,7 +81,23 @@ Para activarlos hay que acer el enlace simbólico:
 ln -sv "/Users/$(whoami)/projects/dotfiles/hammerspoon/init.lua" ~/.hammerspoon/init.lua
 ```
 
-## Enlaces
+## Gitignore
+
+Crea un enlace simbólico al archivo `git/.gitignore`
+
+En Linux Mint:
+
+```bash
+ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitignore" ~
+```
+
+En macos:
+
+```bash
+ln -sv "/Users/$(whoami)/projects/dotfiles/git/.gitignore" ~
+```
+
+# Enlaces
 
 Tomé ideas de estos otros:
 

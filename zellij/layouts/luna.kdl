@@ -9,16 +9,10 @@ layout {
     }
 
     pane split_direction="vertical" {
-      pane
-
+      pane // Este abre en la carpeta backend
       pane {
-        pane size="70%" // Este abre en la carpeta backend
-
-        pane size="30%" {
-          cwd "~/projects/luna-project/patient-forms-frontend"
-        }  
+        cwd "~/projects/luna-project/patient-forms-frontend"
       }
-      
     }
   }
 
@@ -32,12 +26,10 @@ layout {
 
       pane {
         pane size="70%" // Este abre en la carpeta backend
-
         pane size="30%" {
           cwd "~/projects/luna-project/therapist-credentialing-frontend"
         }  
       }
-      
     }
   }
 
@@ -51,12 +43,10 @@ layout {
 
       pane {
         pane size="70%" // Este abre en la carpeta backend
-
         pane size="30%" {
           cwd "~/projects/luna-project/clinical-dashboard-frontend"
         }  
       }
-      
     }
   }
 
@@ -67,11 +57,7 @@ layout {
 
     pane split_direction="vertical" {
       pane
-
-      pane {
-        pane
-        pane
-      }
+      pane
     }
   }
 
@@ -84,11 +70,7 @@ layout {
 
     pane split_direction="vertical" {
       pane
-      
-      pane {
-        pane
-        pane
-      }
+      pane
     }
   }
 }

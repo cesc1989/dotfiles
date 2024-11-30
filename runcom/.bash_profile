@@ -117,6 +117,10 @@ if [ -d "/home/cesc/Zellij" ]; then
   export PATH=$HOME/Zellij:$PATH
 fi
 
+if [ -d "/home/cesc/Delta" ]; then
+  export PATH=$HOME/Delta:$PATH
+fi
+
 ####
 ## GENERAL
 ####

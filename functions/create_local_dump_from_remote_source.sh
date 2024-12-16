@@ -10,7 +10,7 @@ function create_local_dump_from_remote() {
     echo "Usage: restore_db_from_dump -n <dump_name> -u <url>"
     echo ""
     echo "Important:"
-    echo "  Disable history expansion to prevent issues with ! in the password. Disable with set +H"
+    echo "  Disable history expansion to prevent issues with ! in the password. Disable with: set +H"
     echo ""
     echo "Options:"
     echo "  -n <dump_name>    Specify the dump file name."

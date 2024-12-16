@@ -2,7 +2,6 @@
 
 ## Work Projects Navigation
 #
-alias luna_forms="cd ~/projects/luna-project/patient-forms-backend"
 alias luna_credentialing="cd ~/projects/luna-project/therapist-credentialing-backend"
 alias luna_dashboard="cd ~/projects/luna-project/provider-portal"
 alias luna_backend="cd ~/projects/luna-project/backend"
@@ -10,7 +9,6 @@ alias luna_marketplace="cd ~/projects/luna-project/marketplace"
 
 ## Generate Dumps
 #
-alias alpha_patient_forms_generate_dump="luna db create-dev-db --environment alpha --database patient-self-report"
 alias alpha_therapist_signup_generate_dump="luna db create-dev-db --environment alpha --database therapist-signup"
 alias alpha_provider_portal_generate_dump="luna db create-dev-db --environment alpha --database provider-portal"
 alias alpha_edge_generate_dump="luna db create-dev-db --environment alpha --database edge"
@@ -29,7 +27,6 @@ alias zedap="zellij --layout devaspros"
 
 ## Pods
 #
-alias alpha_patient_forms_pods="kubectl get po -n patient-forms-backend"
 alias alpha_therapist_signup_pods="kubectl get po -n therapist-credentialing-backend"
 alias alpha_provider_portal_pods="kubectl get po -n physician-portal"
 alias alpha_edge_pods="kubectl get po -n backend"

@@ -69,6 +69,14 @@ ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/luna.kdl" ~/.config/ze
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
 ```
 
+En Linux Mint:
+
+```bash
+ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
+ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/luna.kdl" ~/.config/zellij/layouts/luna.kdl
+ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+```
+
 ## Hammerspoon - Solo macOS
 
 Necesario tener instalado [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) y [Hammerspoon](http://www.hammerspoon.org/).

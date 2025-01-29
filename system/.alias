@@ -80,4 +80,4 @@ alias s3cp="aws s3 cp"
 ## Other stuff
 #
 alias dap_server="ssh cashflow"
-alias lista_funciones="cat ~/projects/dotfiles/system/.functions"
+alias funciones="cat ~/projects/dotfiles/system/.functions"

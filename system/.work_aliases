@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-## Work Projects Navigation
-#
-alias luna_credentialing="cd ~/projects/luna-project/therapist-credentialing-backend"
-alias luna_dashboard="cd ~/projects/luna-project/provider-portal"
-alias luna_backend="cd ~/projects/luna-project/backend"
-alias luna_marketplace="cd ~/projects/luna-project/marketplace"
-
 ## Generate Dumps
 #
 alias alpha_therapist_signup_generate_dump="luna db create-dev-db --environment alpha --database therapist-signup"

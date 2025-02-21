@@ -25,7 +25,19 @@ layout {
     }
   }
 
-  tab name="superagenda" cwd="~/projects/devaspros-projects/superagenda" {
+  // Ya no estoy trabajando en Super Agenda así que no necesito que apareza en el layout
+  // tab name="superagenda" cwd="~/projects/devaspros-projects/superagenda" {
+  //   pane size=2 borderless=true {
+  //     plugin location="zellij:tab-bar"
+  //   }
+
+  //   pane split_direction="vertical" {
+  //     pane
+  //     pane
+  //   }
+  // }
+
+  tab name="laboratorio" cwd="~/projects/laboratorio_de_ruby" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

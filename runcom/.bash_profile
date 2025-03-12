@@ -95,6 +95,18 @@ if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
   export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 fi
 
+# Load ffmpeg
+#
+if [ -d "$HOME/ffmpeg" ]; then
+  export PATH="$HOME/ffmpeg:$PATH"
+fi
+
+# Load yt-dlp
+#
+if [ -d "$HOME/yt-dlp" ]; then
+  export PATH="$HOME/yt-dlp:$PATH"
+fi
+
 ####
 ## LINUX MINT
 ####

@@ -89,31 +89,43 @@ function matar_servidor_rails() {
   kill -9 $(lsof -i tcp:3000 -t)
 }
 
-# Convierte un hash de Ruby con credenciales de create_new_auth
+# Convierte un hash de Ruby con credenciales de create_new_auth_token
+# en cabeceras HTTP para usar en peticiones GQL desde Postman
 #
 # Ejemplo:
 #
-#    json='{
-#      "access-token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyZjNhNjc5MC1hNjI0LTQ0YWItODE4ZS1hYTk2MWJiMWViODIiLCJpYXQiOjE3NDEyODA4NDd9.acO4EryHIlzhmfAlIXjMxF8lVwjscsabWa7qYW31Y4w",
-#      "token-type": "Bearer",
-#      "client": "uMHhLsQsHE9VBahFfOQ_Kw",
-#      "expiry": "1801280847",
-#      "uid": "demo+staging26@koombea.com",
-#      "Authorization": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlKOS5leUp6ZFdJaU9pSXlaak5oTmpjNU1DMWhOakkwTFRRMFlXSXRPREU0WlMxaFlUazJNV0ppTVdWaU9ESWlMQ0pwWVhRaU9qRTNOREV5T0RBNE5EZDkuYWNPNEVyeUhJbHpobWZBbElYak14RjhsVndqc2NzYWJXYTdxWVczMVk0dyIsInRva2VuLXR5cGUiOiJCZWFyZXIiLCJjbGllbnQiOiJ1TUhoTHNRc0hFOVZCYWhGZk9RX0t3IiwiZXhwaXJ5IjoiMTgwMTI4MDg0NyIsInVpZCI6ImRlbW8rc3RhZ2luZzI2QGtvb21iZWEuY29tIn0="
-#    }'
+#    ruby_hash='{"access-token"=>"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYTkyZDQwOC1kZjdlLTRiYWUtOTJhMS01ODc0Y2VhYmJlZDQiLCJpYXQiOjE3NDM1MTYwMTh9.dgtHGQEBVnKL6Vok1-jkf3X1okoWnFQmoTBvjXpnhRA", "token-type"=>"Bearer", "client"=>"kPaUWyE92m9eq_q7J20lWg", "expiry"=>"1803516018", "uid"=>"steve+nt@getluna.com", "Authorization"=>"Bearer eyJhY2Nlc3MtdG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlKOS5leUp6ZFdJaU9pSmpZVGt5WkRRd09DMWtaamRsTFRSaVlXVXRPVEpoTVMwMU9EYzBZMlZoWW1KbFpEUWlMQ0pwWVhRaU9qRTNORE0xTVRZd01UaDkuZGd0SEdRRUJWbktMNlZvazEtamtmM1gxb2tvV25GUW1vVEJ2alhwbmhSQSIsInRva2VuLXR5cGUiOiJCZWFyZXIiLCJjbGllbnQiOiJrUGFVV3lFOTJtOWVxX3E3SjIwbFdnIiwiZXhwaXJ5IjoiMTgwMzUxNjAxOCIsInVpZCI6InN0ZXZlK250QGdldGx1bmEuY29tIn0="}'
 #
-#    headers_from_json "$json"
-function headers_from_json() {
-  local json_input="$1"
+#    headers_from_ruby_hash "$ruby_hash"
+#
+# Nota como el hash está en una sola línea. Y clave envolver la variable entre comilla doble.
+function headers_from_ruby_hash() {
+  # Usar un here-string para evitar problemas con comillas
+  ruby_hash=$(cat <<< "$1")
 
-  # 1. Convertir hash de Ruby a JSON válido
-  json=$(echo "$json_input" | sed -E 's/=>/:/g' | jq '.' 2>/dev/null)
+  # Convertir hash Ruby a JSON válido de manera más robusta
+  json=$(echo "$ruby_hash" | \
+         sed -E 's/=>/:/g' | \
+         sed -E 's/: *"/:"/g' | \
+         sed -E 's/^\{|\}$//g' | \
+         awk '{$1=$1;print}' | \
+         sed 's/^/{/' | sed 's/$/}/' | \
+         jq '.' 2>/dev/null)
 
   if [[ $? -ne 0 ]]; then
-    echo "Error: El hash no tiene el formato correcto." >&2
+    echo "Error: No se pudo convertir el hash Ruby a JSON válido." >&2
+    echo "Input recibido:" >&2
+    echo "$ruby_hash" >&2
     return 1
   fi
 
-  # 2. Convertir JSON en formato de cabeceras HTTP
-  echo "$json" | jq -r 'to_entries[] | "\(.key):\(.value)"'
+  # Convertir JSON a cabeceras HTTP
+  echo "$json" | jq -r 'to_entries[] | "\(.key): \(.value)"'
+}
+
+# Este hace lo mismo que headers_from_ruby_hash() pero usa Ruby para cargar el Hash y volverlo JSON.
+function headers_from_hash_with_ruby() {
+  echo "$1" | \
+  ruby -r json -e 'puts eval(ARGF.read).to_json' | \
+  jq -r 'to_entries[] | "\(.key): \(.value)"'
 }

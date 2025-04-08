@@ -59,3 +59,7 @@ end)
 hyper:bind({}, "H", function()
   hs.application.launchOrFocus("Dash")
 end)
+
+hyper:bind({}, "C", function()
+  hs.application.launchOrFocus("Cursor")
+end)

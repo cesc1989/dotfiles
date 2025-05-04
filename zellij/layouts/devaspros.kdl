@@ -36,6 +36,17 @@ layout {
     }
   }
 
+  tab name="enlacito" cwd="~/projects/devaspros-projects/enlacito" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
   // Para tener un espacio para dotfiles, Puntapie, etc
   tab name="libre" cwd="~/projects/devaspros-projects/" {
     pane size=2 borderless=true {

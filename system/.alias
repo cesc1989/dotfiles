@@ -81,3 +81,8 @@ alias s3cp="aws s3 cp"
 #
 alias dap_server="ssh cashflow"
 alias funciones="cat ~/projects/dotfiles/system/.functions"
+
+## Editores de Texto
+#
+alias sbl="subl ."
+alias zd="zed ."

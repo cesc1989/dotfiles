@@ -1,27 +1,5 @@
 #!/usr/bin/env bash
 
-## Explore Therapist Signup Bucket in Alpha
-#
-# Use:
-#
-#     alpha_signup_files [UUID]
-function alpha_signup_files() {
-  setaws alpha
-
-  s3ls "luna-alpha-workloads-therapist-signup/$1/"
-}
-
-## Explore Therapist Signup Bucket in Omega
-#
-# Use:
-#
-#     omega_signup_files [UUID]
-function omega_signup_files() {
-  setaws omega
-
-  s3ls "luna-omega-workloads-therapist-credentialing/$1/"
-}
-
 ## Print the installed gem version
 #
 # Use:
@@ -60,28 +38,6 @@ function alpha_service_pod() {
       echo -e "Valid services are:\n $valid_services"
       ;;
   esac
-}
-
-## Copy Omega Therapist Signup files to local folder
-#
-# Use:
-#
-#     omega_copy_signup_files [UUID] [FILE_NAME]
-function omega_copy_signup_files() {
-  setaws omega
-
-  s3cp "s3://luna-omega-workloads-therapist-credentialing/$1/$2" "$HOME/Downloads/$1/"
-}
-
-## Copy Alpha Therapist Signup files to local folder
-#
-# Use:
-#
-#     alpha_copy_signup_files [UUID] [FILE_NAME]
-function alpha_copy_signup_files() {
-  setaws alpha
-
-  s3cp "s3://luna-alpha-workloads-therapist-signup/$1/$2" "$HOME/Downloads/$1/"
 }
 
 ## Kills rails server on port 3000

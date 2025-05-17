@@ -7,8 +7,8 @@ Mis dotfiles.
 Clone este repo:
 
 ```bash
-$ cd ~/projects
-$ git clone https://github.com/cesc1989/dotfiles
+cd ~/projects
+git clone https://github.com/cesc1989/dotfiles
 ```
 
 Crea un enlace simbólico a la carpeta `$HOME`.
@@ -83,7 +83,7 @@ Necesario tener instalado [Karabiner-Elements](https://github.com/pqrs-org/Karab
 
 Esta es una herramienta para atajos de teclado mediante scripts escritos en Lua.
 
-Para activarlos hay que acer el enlace simbólico:
+Para activarlos hay que hacer el enlace simbólico:
 
 ```bash
 ln -sv "/Users/$(whoami)/projects/dotfiles/hammerspoon/init.lua" ~/.hammerspoon/init.lua
@@ -91,7 +91,7 @@ ln -sv "/Users/$(whoami)/projects/dotfiles/hammerspoon/init.lua" ~/.hammerspoon/
 
 ## Gitignore
 
-Crea un enlace simbólico al archivo `git/.gitignore`
+Crea un enlace simbólico al archivo `git/.gitignore`.
 
 En Linux Mint:
 

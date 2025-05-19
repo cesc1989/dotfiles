@@ -88,11 +88,11 @@ if [ -d "/opt/homebrew/opt/imagemagick@6/bin" ]; then
   export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
 fi
 
-# PostgreSQL@16 with Homebrew asked for this
+# PostgreSQL@17 with Homebrew asked for this
 #
 # for macos Ventura
-if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
-  export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+if [ -d "/opt/homebrew/opt/postgresql@17/bin" ]; then
+  export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 fi
 
 # Load ffmpeg

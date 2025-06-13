@@ -85,3 +85,16 @@ function headers_from_hash_with_ruby() {
   ruby -r json -e 'puts eval(ARGF.read).to_json' | \
   jq -r 'to_entries[] | "\(.key): \(.value)"'
 }
+
+## Convert JSON to one-liner
+#
+# Usage:
+#     json_oneliner [FILE]
+#     cat file.json | json_oneliner
+function json_oneliner() {
+  if [[ $# -eq 0 ]]; then
+    jq -c .
+  else
+    jq -c . "$1"
+  fi
+}

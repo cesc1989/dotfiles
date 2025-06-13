@@ -1,2 +1,8 @@
 .DS_Store
+
+# Uso este archivo para escribir código rails que quiero probar en la consola de rails
 test_models.rb
+
+# Necesito este archivo para pegar los JSON de los webhooks de HS y poder volverlos a una línea
+# con la función json_oneliner.
+webhook_tests.json

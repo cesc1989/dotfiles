@@ -17,10 +17,3 @@ alias awsloginomega="aws sso login --profile omega"
 alias zetwopanes="zellij --layout two_panes"
 alias zeluna="zellij --layout luna"
 alias zedap="zellij --layout devaspros"
-
-## Pods
-#
-alias alpha_therapist_signup_pods="kubectl get po -n therapist-credentialing-backend"
-alias alpha_provider_portal_pods="kubectl get po -n physician-portal"
-alias alpha_edge_pods="kubectl get po -n backend"
-alias alpha_marketplace_pods="kubectl get po -n marketplace"

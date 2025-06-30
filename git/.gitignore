@@ -6,3 +6,8 @@ test_models.rb
 # Necesito este archivo para pegar los JSON de los webhooks de HS y poder volverlos a una línea
 # con la función json_oneliner.
 webhook_tests.json
+
+# Para ponerlo en todos los repos y poder usar Node desde NVM. Sin embargo, poner ese archivo no es suficiente.
+#
+# Ahora solo necesito hacer `nvm use` y pasare a la versión de node en el archivo. Pero para poder cargar Node automaticamente hay que poner un script que haga esto o pasarme a nodenv.
+.nvmrc

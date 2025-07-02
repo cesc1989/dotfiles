@@ -11,3 +11,6 @@ webhook_tests.json
 #
 # Ahora solo necesito hacer `nvm use` y pasare a la versión de node en el archivo. Pero para poder cargar Node automaticamente hay que poner un script que haga esto o pasarme a nodenv.
 .nvmrc
+
+# Estará en cada repo donde quiera usar Claude Code.
+CLAUDE.local.md

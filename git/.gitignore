@@ -14,3 +14,4 @@ webhook_tests.json
 
 # Estará en cada repo donde quiera usar Claude Code.
 CLAUDE.local.md
+.claude

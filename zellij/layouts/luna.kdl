@@ -1,6 +1,9 @@
 // Este layout todos los proyectos de Luna en los que participo.
 //
-// Patient Self Report frontend, Therapist Signup, Clinical Dashboard, Edge.
+//   -  Edge (Forms y Clinical Dashboard backends)
+//   -  Therapist Signup (backend y frontend)
+//   -  Patient Self Report frontend
+//   -  free (para usos diversos)
 //
 layout {
   tab name="edge" focus=true cwd="~/projects/luna-project/backend" {
@@ -31,29 +34,17 @@ layout {
     }
   }
 
-  tab name="clinical-dashboard" cwd="~/projects/luna-project/provider-portal" {
+  tab name="frontend-apps" cwd="~/projects/luna-project/patient-forms-frontend" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
 
     pane split_direction="vertical" {
       pane
-
       pane {
-        pane size="70%" // Este abre en la carpeta backend
-        pane size="30%" {
-          cwd "~/projects/luna-project/clinical-dashboard-frontend"
-        }  
+        cwd "~/projects/luna-project/clinical-dashboard-frontend"
       }
     }
-  }
-
-  tab name="forms-frontend" cwd="~/projects/luna-project/patient-forms-frontend" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane
   }
 
   // This is a tab to use when creating new git worktrees. So that I don't need to

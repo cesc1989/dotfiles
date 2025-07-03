@@ -3,7 +3,6 @@
 ## Generate Dumps
 #
 alias alpha_therapist_signup_generate_dump="luna db create-dev-db --environment alpha --database therapist-signup"
-alias alpha_provider_portal_generate_dump="luna db create-dev-db --environment alpha --database provider-portal"
 alias alpha_edge_generate_dump="luna db create-dev-db --environment alpha --database edge"
 alias alpha_marketplace_generate_dump="luna db create-dev-db --environment alpha --database marketplace"
 

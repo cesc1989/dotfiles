@@ -1,8 +1,8 @@
 // Este layout todos los proyectos de Luna en los que participo.
 //
 //   -  Edge (Forms y Clinical Dashboard backends)
-//   -  Therapist Signup (backend y frontend)
-//   -  Patient Self Report frontend
+//   -  Therapist Signup Backend
+//   -  Frontend apps: Patient Self Report, Therapist Sign Up y Clinical Dashboard
 //   -  free (para usos diversos)
 //
 layout {
@@ -24,13 +24,7 @@ layout {
 
     pane split_direction="vertical" {
       pane
-
-      pane {
-        pane size="70%" // Este abre en la carpeta backend
-        pane size="30%" {
-          cwd "~/projects/luna-project/therapist-credentialing-frontend"
-        }  
-      }
+      pane
     }
   }
 
@@ -41,6 +35,9 @@ layout {
 
     pane split_direction="vertical" {
       pane
+      pane {
+        cwd "~/projects/luna-project/therapist-credentialing-frontend"
+      }
       pane {
         cwd "~/projects/luna-project/clinical-dashboard-frontend"
       }

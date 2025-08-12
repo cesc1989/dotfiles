@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Copy Zed settings and keymaps to a specified directory
-copy_zed_settings() {
+# Copy macos Zed settings and keymaps to the Mega folder
+copy_zed_macos_settings() {
   local source_dir="$HOME/.config/zed"
-  local destination_dir="$HOME/Documents/Documents-2024-10-18/Desarrollo de Software/zed-settings"
+  local destination_dir="$HOME/Documents/Documents/Desarrollo-de-Software/zed-settings/macos"
 
   cp "$source_dir/keymap.json" "$destination_dir/"
   cp "$source_dir/settings.json" "$destination_dir/"

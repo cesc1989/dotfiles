@@ -24,3 +24,8 @@ alias zedap="zellij --layout devaspros"
 # Solo falta pasarle el mensaje entre comillas.
 alias piar="hub pull-request -c -b omega -m"
 alias draftpiar="hub pull-request -c -d -b omega -m"
+
+## Acceder a los containers en Alpha
+#
+alias pae="alpha_edge_pod"
+alias pat="alpha_therapists_pod"

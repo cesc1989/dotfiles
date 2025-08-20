@@ -34,22 +34,6 @@ function alpha_service_pod() {
   esac
 }
 
-## Auto-login to latest pod for each service
-function alpha_therapists_pod() {
-  latest_pod=$(kubectl get po -n therapist-credentialing-backend --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
-  kubectl exec -it -n therapist-credentialing-backend "$latest_pod" -- sh
-}
-
-function alpha_edge_pod() {
-  latest_pod=$(kubectl get po -n backend --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
-  kubectl exec -it -n backend "$latest_pod" -- sh
-}
-
-function alpha_marketplace_pod() {
-  latest_pod=$(kubectl get po -n marketplace --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
-  kubectl exec -it -n marketplace "$latest_pod" -- sh
-}
-
 ## Kills rails server on port 3000
 function matar_servidor_rails() {
   kill -9 $(lsof -i tcp:3000 -t)

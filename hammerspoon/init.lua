@@ -40,10 +40,9 @@ hyper:bind({}, "T", function()
   hs.application.launchOrFocus("Terminal")
 end)
 
--- Desactivado porque tropiezo mucho la letra D
--- hyper:bind({}, "D", function()
---   hs.application.launchOrFocus("DBeaver")
--- end)
+hyper:bind({}, "D", function()
+  hs.application.launchOrFocus("DBeaver")
+end)
 
 hyper:bind({}, "P", function()
   hs.application.launchOrFocus("Postman")

@@ -14,11 +14,13 @@ function alpha_edge_pod() {
   kubectl exec -it -n backend "$latest_pod" -- sh
 }
 
+# Also aliased as pam
 function alpha_marketplace_pod() {
   latest_pod=$(kubectl get po -n marketplace --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
   kubectl exec -it -n marketplace "$latest_pod" -- sh
 }
 
+# Also aliased as pag
 function alpha_grimoire_pod() {
   latest_pod=$(kubectl get po -n grimoire --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
   kubectl exec -it -n grimoire "$latest_pod" -- sh

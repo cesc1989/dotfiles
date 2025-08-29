@@ -29,3 +29,5 @@ alias draftpiar="hub pull-request -c -d -b omega -m"
 #
 alias pae="alpha_edge_pod"
 alias pat="alpha_therapists_pod"
+alias pam="alpha_marketplace_pod"
+alias pag="alpha_grimoire_pod"

@@ -14,13 +14,24 @@ create_git_worktree() {
   local worktree_path="$parent_dir/$folder_name"
 
   if [[ -z "$folder_name" || -z "$branch_name" ]]; then
-    echo "Error: Both folder name and branch name are required"
     echo "Usage: create_git_worktree <folder_name> <branch_name>"
+    echo ""
+    echo "Create a git worktree outside the current directory."
+    echo "After creating the worktree, it'll copy files .nvmrc and .env if they exist."
+    echo ""
+    echo "Arguments:"
+    echo "  folder_name   Name of the folder to create for the worktree"
+    echo "  branch_name   Name of the branch to checkout in the worktree"
+    echo ""
+    echo "Example:"
+    echo "  create_git_worktree sftptodrive edg_2048_sftp_to_gdrive"
+
     return 1
   fi
 
   if [[ -d "$worktree_path" ]]; then
     echo "Error: Directory '$worktree_path' already exists"
+
     return 1
   fi
 
@@ -43,6 +54,7 @@ create_git_worktree() {
     echo "You can navigate to it with: cd $worktree_path"
   else
     echo "Error: Failed to create worktree"
+
     return 1
   fi
 }

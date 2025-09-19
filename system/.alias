@@ -72,7 +72,7 @@ alias pruebas="bundle exec rspec"
 # fzf -e (-e or --exact)
 alias routes="bundle exec rails routes | fzf -e"
 
-## AWS stuff
+## AWS
 #
 alias s3ls="aws s3 ls"
 alias s3cp="aws s3 cp"

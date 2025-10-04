@@ -82,6 +82,7 @@ alias s3cp="aws s3 cp"
 alias dap_server="ssh cashflow"
 alias funciones="cat ~/projects/dotfiles/system/.functions"
 alias fms="foreman start"
+alias jese="bundle exec jekyll serve --livereload"
 
 ## Editores de Texto
 #

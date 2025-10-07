@@ -2,6 +2,10 @@
 
 # Script optimizado para descargar playlists de YouTube
 # Uso: ./yttoplex.sh -u "URL" -p "PREFIJO" -d "DESTINO"
+#
+# No olvides hacerlo ejecutable:
+#
+#    chmod +x $HOME/projects/dotfiles/extras/yttoplex.sh
 
 URL=""
 PREFIX=""

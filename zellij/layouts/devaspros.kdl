@@ -3,7 +3,7 @@
 // Cash Flow, CoshiNotes, Enlacito, etc.
 //
 layout {
-  tab name="cashflow" focus=true cwd="~/projects/devaspros-projects/cashflow" {
+  tab name="cashflow (1)" focus=true cwd="~/projects/devaspros-projects/cashflow" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -14,7 +14,7 @@ layout {
     }
   }
 
-  tab name="coshinotes" cwd="~/projects/devaspros-projects/coshinotes" {
+  tab name="coshinotes (2)" cwd="~/projects/devaspros-projects/coshinotes" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -25,7 +25,7 @@ layout {
     }
   }
 
-  tab name="enlacito" cwd="~/projects/devaspros-projects/enlacito" {
+  tab name="enlacito (3)" cwd="~/projects/devaspros-projects/enlacito" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -36,29 +36,7 @@ layout {
     }
   }
 
-  tab name="laboratorio" cwd="~/projects/laboratorio_de_ruby" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="supermenu" cwd="~/projects/devaspros-projects/supermenu" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="high_perf_psql_rails" cwd="~/projects/high_perf_psql_rails" {
+  tab name="laboratorio (4)" cwd="~/projects/laboratorio_de_ruby" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -70,7 +48,29 @@ layout {
   }
 
   // Para tener un espacio para dotfiles, Puntapie, etc
-  tab name="libre" cwd="~/projects/devaspros-projects/" {
+  tab name="libre (5)" cwd="~/projects/devaspros-projects/" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="high_perf_psql_rails (6)" cwd="~/projects/high_perf_psql_rails" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="supermenu (7)" cwd="~/projects/devaspros-projects/supermenu" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

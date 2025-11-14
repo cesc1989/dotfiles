@@ -70,18 +70,7 @@ layout {
     }
   }
 
-  tab name="supermenu (7)" cwd="~/projects/devaspros-projects/supermenu" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="dotfiles (8)" cwd="~/projects/dotfiles" {
+  tab name="dotfiles (7)" cwd="~/projects/dotfiles" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

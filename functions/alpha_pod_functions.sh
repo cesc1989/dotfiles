@@ -26,32 +26,30 @@ function alpha_grimoire_pod() {
   kubectl exec -it -n grimoire "$latest_pod" -- sh
 }
 
-## Read/Copy to Alpha S3 buckets
+## Las anteriores son veriones mejores que esta.
 #
-#  Ejemplo:
+## Log into service Pod
 #
-#    alpha_s3_ls luna-alpha-workloads-data-lake/
+# Example:
 #
-#    alpha_s3_ls luna-alpha-workloads-data-lake/business-operations/
-#
-#    alpha_s3_ls luna-alpha-workloads-data-lake/business-operations/therapist-forward-fill/
-#
-function alpha_s3_ls() {
-  setaws alpha
+#     alpha_service_pod forms [POD_ID]
+function alpha_service_pod() {
+  service_name=$1
+  service_id=$2
+  valid_services="therapists, edge, marketplace"
 
-  aws s3 ls $1
-}
-
-## Copiar archivo de local a bucket en S3 o viceversa.
-#
-#  Ejemplo:
-#
-#    alpha_s3_cp ~/Downloads/archivo.txt s3://luna-alpha-workloads-data-lake/business-operations/
-#
-#    alpha_s3_cp s3://luna-alpha-workloads-data-lake/business-operations/archivo.txt ~/Downloads/archivo.txt
-#
-function alpha_s3_cp() {
-  setaws alpha
-
-  aws s3 cp $1 $2
+  case $service_name in
+    therapists)
+      kubectl exec -it -n therapist-credentialing-backend "therapist-credentialing-backend-$service_id" -- sh
+      ;;
+    edge)
+      kubectl exec -it -n backend "backend-$service_id" -- sh
+      ;;
+    marketplace)
+      kubectl exec -it -n marketplace "marketplace-$service_id" -- sh
+      ;;
+    *)
+      echo -e "Valid services are:\n $valid_services"
+      ;;
+  esac
 }

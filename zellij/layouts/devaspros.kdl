@@ -80,4 +80,15 @@ layout {
       pane
     }
   }
+
+  tab name="dotfiles (8)" cwd="~/projects/dotfiles" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
 }

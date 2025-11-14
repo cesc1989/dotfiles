@@ -1,42 +1,19 @@
 #!/usr/bin/env bash
 
-## Print the installed gem version
-#
-# Use:
-#     cat_gemfile [GEM_NAME]
-function cat_gemfile() {
-  cat Gemfile.lock | grep $1
-}
-
-## Log into service Pod
+# To change between several AWS accounts configured in `~/.aws/config`
 #
 # Example:
 #
-#     alpha_service_pod forms [POD_ID]
-function alpha_service_pod() {
-  service_name=$1
-  service_id=$2
-  valid_services="therapists, edge, marketplace"
-
-  case $service_name in
-    therapists)
-      kubectl exec -it -n therapist-credentialing-backend "therapist-credentialing-backend-$service_id" -- sh
-      ;;
-    edge)
-      kubectl exec -it -n backend "backend-$service_id" -- sh
-      ;;
-    marketplace)
-      kubectl exec -it -n marketplace "marketplace-$service_id" -- sh
-      ;;
-    *)
-      echo -e "Valid services are:\n $valid_services"
-      ;;
-  esac
-}
-
-## Kills rails server on port 3000
-function matar_servidor_rails() {
-  kill -9 $(lsof -i tcp:3000 -t)
+#    $ setaws alpha
+setaws() {
+  if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    echo "Example: setaws alpha"
+  else
+    echo "Exporting aws profiles to: $1"
+    export AWS_PROFILE=$1
+  fi
 }
 
 # Convierte un hash de Ruby con credenciales de create_new_auth_token

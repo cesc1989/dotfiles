@@ -3,7 +3,7 @@
 # See webpro installation script: https://github.com/webpro/dotfiles/blob/master/runcom/.bash_profile
 
 # Load all current dotfiles
-for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases,functions}; do
+for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases}; do
   [ -f "$DOTFILE" ] && source $DOTFILE
 done
 
@@ -141,22 +141,6 @@ fi
 #
 # See https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
-
-# To change between several AWS accounts configured in `~/.aws/config`
-#
-# Example:
-#
-#    $ setaws alpha
-setaws() {
-  if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied"
-    echo "Example: setaws alpha"
-  else
-    echo "Exporting aws profiles to: $1"
-    export AWS_PROFILE=$1
-  fi
-}
 
 # Load Hub bash completion script
 if [ -f ~/hub.bash_completion.sh ]; then

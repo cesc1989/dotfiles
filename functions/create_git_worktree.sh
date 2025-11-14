@@ -51,6 +51,11 @@ create_git_worktree() {
       echo "Copied .env to worktree"
     fi
 
+    if [[ -f "test_models.rb" ]]; then
+      cp "test_models.rb" "$worktree_path/"
+      echo "Copied test_models to worktree"
+    fi
+
     echo "You can navigate to it with: cd $worktree_path"
   else
     echo "Error: Failed to create worktree"

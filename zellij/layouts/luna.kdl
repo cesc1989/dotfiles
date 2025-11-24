@@ -1,24 +1,12 @@
 // Este layout todos los proyectos de Luna en los que participo.
 //
-//   -  Edge + Forms y Clinical Dashboard backends
-//   -  Therapist Signup Backend
+//   -  Edge + Forms, Therapist Signup y Clinical Dashboard backends
 //   -  Frontend apps: Patient Self Report, Therapist Sign Up y Clinical Dashboard
 //   -  luna-project: para poner scripts o iniciar sesiones de Claude globales
 //   -  free (para usos diversos)
 //
 layout {
   tab name="edge" focus=true cwd="~/projects/luna-project/backend" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="therapist-signup" cwd="~/projects/luna-project/therapist-credentialing-backend" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

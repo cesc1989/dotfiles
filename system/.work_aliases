@@ -2,7 +2,6 @@
 
 ## Generate Dumps
 #
-alias alpha_therapist_signup_generate_dump="luna db create-dev-db --environment alpha --database therapist-signup"
 alias alpha_edge_generate_dump="luna db create-dev-db --environment alpha --database edge"
 alias alpha_marketplace_generate_dump="luna db create-dev-db --environment alpha --database marketplace"
 alias alpha_grimoire_generate_dump="luna db create-dev-db --environment alpha --database grimoire"
@@ -29,6 +28,5 @@ alias draftpiar="hub pull-request -c -d -b omega -m"
 ## Acceder a los containers en Alpha
 #
 alias pae="alpha_edge_pod"
-alias pat="alpha_therapists_pod"
 alias pam="alpha_marketplace_pod"
 alias pag="alpha_grimoire_pod"

@@ -2,12 +2,6 @@
 
 ## Auto-login to latest pod for each service in Alpha env.
 
-# Also aliased as pat
-function alpha_therapists_pod() {
-  latest_pod=$(kubectl get po -n therapist-credentialing-backend --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
-  kubectl exec -it -n therapist-credentialing-backend "$latest_pod" -- sh
-}
-
 # Also aliased as pae
 function alpha_edge_pod() {
   latest_pod=$(kubectl get po -n backend --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
@@ -36,12 +30,9 @@ function alpha_grimoire_pod() {
 function alpha_service_pod() {
   service_name=$1
   service_id=$2
-  valid_services="therapists, edge, marketplace"
+  valid_services="edge, marketplace"
 
   case $service_name in
-    therapists)
-      kubectl exec -it -n therapist-credentialing-backend "therapist-credentialing-backend-$service_id" -- sh
-      ;;
     edge)
       kubectl exec -it -n backend "backend-$service_id" -- sh
       ;;

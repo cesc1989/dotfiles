@@ -4,16 +4,6 @@ Este archivo contiene un índice de todas las funciones disponibles en la carpet
 
 ## Funciones de Kubernetes (Alpha Pods)
 
-### `alpha_therapists_pod`
-**Archivo:** `alpha_pod_functions.sh`
-**Alias:** `pat`
-Accede automáticamente al pod más reciente del servicio therapists en Alpha.
-
-**Ejemplo:**
-```bash
-alpha_therapists_pod
-```
-
 ### `alpha_edge_pod`
 **Archivo:** `alpha_pod_functions.sh`
 **Alias:** `pae`

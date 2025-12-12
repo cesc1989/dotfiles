@@ -8,6 +8,12 @@ function alpha_edge_pod() {
   kubectl exec -it -n backend "$latest_pod" -- sh
 }
 
+# Also aliased as paec (alpha edge console)
+function alpha_edge_console() {
+  latest_pod=$(kubectl get po -n backend --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')
+  kubectl exec -it -n backend "$latest_pod" -- bundle exec rails c
+}
+
 # Also aliased as pam
 function alpha_marketplace_pod() {
   latest_pod=$(kubectl get po -n marketplace --sort-by=.metadata.creationTimestamp | tail -1 | awk '{print $1}')

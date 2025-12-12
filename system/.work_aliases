@@ -28,5 +28,6 @@ alias draftpiar="hub pull-request -c -d -b omega -m"
 ## Acceder a los containers en Alpha
 #
 alias pae="alpha_edge_pod"
+alias paec="alpha_edge_console"
 alias pam="alpha_marketplace_pod"
 alias pag="alpha_grimoire_pod"

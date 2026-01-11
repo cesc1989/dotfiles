@@ -14,7 +14,7 @@ layout {
     }
   }
 
-  tab name="coshinotes (2)" cwd="~/projects/devaspros-projects/coshinotes" {
+  tab name="coshinotes" cwd="~/projects/devaspros-projects/coshinotes" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -36,7 +36,7 @@ layout {
     }
   }
 
-  tab name="laboratorio (4)" cwd="~/projects/laboratorio_de_ruby" {
+  tab name="laboratorio" cwd="~/projects/laboratorio_de_ruby" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -47,7 +47,7 @@ layout {
     }
   }
 
-  // Para tener un espacio para dotfiles, Puntapie, etc
+  // Para tener un espacio para cualquier cosa
   tab name="libre (5)" cwd="~/projects/devaspros-projects/" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
@@ -59,7 +59,7 @@ layout {
     }
   }
 
-  tab name="high_perf_psql_rails (6)" cwd="~/projects/high_perf_psql_rails" {
+  tab name="dotfiles" cwd="~/projects/dotfiles" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -70,7 +70,18 @@ layout {
     }
   }
 
-  tab name="dotfiles (7)" cwd="~/projects/dotfiles" {
+  tab name="franciscoquintero.com (7)" cwd="~/projects/franciscoquintero" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="high_perf_psql_rails" cwd="~/projects/high_perf_psql_rails" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

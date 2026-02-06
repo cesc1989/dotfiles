@@ -70,18 +70,7 @@ layout {
     }
   }
 
-  tab name="franciscoquintero.com (7)" cwd="~/projects/franciscoquintero" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="high_perf_psql_rails" cwd="~/projects/high_perf_psql_rails" {
+  tab name="web&blog (7)" cwd="~/projects/franciscoquintero" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

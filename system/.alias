@@ -79,8 +79,8 @@ alias s3cp="aws s3 cp"
 
 ## Other stuff
 #
-alias dap_server="ssh cashflow"
-alias dap_node="ssh cashflow"
+alias dap_node="ssh dap_node"
+alias dap_hatch="ssh dap_hatch"
 alias funciones="cat ~/projects/dotfiles/system/.functions"
 alias fms="foreman start"
 alias jese="bundle exec jekyll serve --livereload"

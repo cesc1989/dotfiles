@@ -107,6 +107,12 @@ if [ -d "$HOME/yt-dlp" ]; then
   export PATH="$HOME/yt-dlp:$PATH"
 fi
 
+# Load OpenCode
+#
+if [ -d "/Users/francisco/.opencode/bin/" ]; then
+  export PATH="/Users/francisco/.opencode/bin:$PATH"
+fi
+
 ####
 ## LINUX MINT
 ####

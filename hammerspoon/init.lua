@@ -44,12 +44,6 @@ hyper:bind({}, "D", function()
   hs.application.launchOrFocus("DBeaver")
 end)
 
--- Estoy dejando de usar Postman para usar Bruno.
---
--- hyper:bind({}, "P", function()
---   hs.application.launchOrFocus("Postman")
--- end)
-
 hyper:bind({}, "Z", function()
   hs.application.launchOrFocus("Zed")
 end)

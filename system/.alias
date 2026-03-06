@@ -2,12 +2,9 @@
 
 ## Shell
 #
-alias l="ls"
-alias ll="ls -l"
-alias la="ls -a"
+alias ll="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
-alias psg="ps aux | grep"
 alias h="history"
 alias reload="source ~/.profile"
 alias os_version="lsb_release -d"

@@ -179,3 +179,16 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-
 # Prevent when running scripts in a rails console it breaks.
 #
 export DISABLE_SPRING=true
+
+## Configuración para nnn: https://github.com/jarun/nnn
+#
+# Estos son los colores de los contextos (paneles)
+export NNN_COLORS="#0a1b2c3d"
+
+# Estos son los colores para los archivos y directorios
+export NNN_FCOLORS="c1e2272e006033f7c6d6abc4"
+
+# Dracula https://draculatheme.com/nnn
+# export NNN_FCOLORS="D4DEB778E79F9F67D2E5E5D2"
+
+# export NNN_FIFO=/tmp/nnn.fifo

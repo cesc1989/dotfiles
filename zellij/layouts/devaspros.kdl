@@ -80,4 +80,15 @@ layout {
       pane
     }
   }
+
+  tab name="supermenu" cwd="~/projects/devaspros-projects/supermenu" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
 }

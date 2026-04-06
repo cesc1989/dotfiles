@@ -3,8 +3,6 @@
 //   -  Clinical: monolito principal
 //   -  Frontend apps: Patient Self Report, Credentialing, Clinical Dashboard y Echo
 //   -  luna-project: para poner scripts o iniciar sesiones de Claude globales
-//   -  Grimoire
-//   -  Marketplace
 //
 layout {
   tab name="clinical" focus=true cwd="~/projects/luna-project/backend" {
@@ -42,28 +40,6 @@ layout {
   }
 
   tab name="luna-project" cwd="~/projects/luna-project" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="grimoire" cwd="~/projects/luna-project/grimoire" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="marketplace" cwd="~/projects/luna-project/marketplace" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

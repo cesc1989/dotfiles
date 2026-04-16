@@ -59,3 +59,7 @@ end)
 hyper:bind({}, "N", function()
   hs.application.launchOrFocus("Bruno")
 end)
+
+hyper:bind({}, "L", function()
+  hs.application.launchOrFocus("LibreWolf")
+end)

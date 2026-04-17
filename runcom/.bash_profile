@@ -153,17 +153,6 @@ if [ -f ~/hub.bash_completion.sh ]; then
   . ~/hub.bash_completion.sh
 fi
 
-# Load logcli for Luna x_logs script
-if [ -d "$HOME/log-cli" ]; then
-  export PATH="$HOME/log-cli:$PATH"
-fi
-
-# Luna CLI configuration
-if [ -d "$HOME/bin" ]; then
-  export PATH="$HOME/bin/:$PATH"
-  [[ \$commands[luna] ]] && source <(luna completion bash)
-fi
-
 # Setup asdf if .asdf folder exists
 #
 # See https://asdf-vm.com/guide/getting-started.html
@@ -171,10 +160,6 @@ if [ -d "$HOME/.asdf" ]; then
   . "$HOME/.asdf/asdf.sh"
   . "$HOME/.asdf/completions/asdf.bash"
 fi
-
-# For Grimoire
-#
-export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-threads --enable-kernel-poll --enable-wx --enable-webview --enable-darwin-64bit --enable-gettimeofday-as-os-system-time"
 
 # Prevent when running scripts in a rails console it breaks.
 #

@@ -65,7 +65,6 @@ En macos:
 
 ```bash
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
-ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/luna.kdl" ~/.config/zellij/layouts/luna.kdl
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
 ```
 
@@ -73,7 +72,6 @@ En Linux Mint:
 
 ```bash
 ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
-ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/luna.kdl" ~/.config/zellij/layouts/luna.kdl
 ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
 ```
 

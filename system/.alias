@@ -87,3 +87,5 @@ alias nud="nvm use default"
 #
 alias sbl="subl ."
 alias zd="zed ."
+
+alias marktext="/Applications/MarkText.app/Contents/MacOS/MarkText"

@@ -20,9 +20,9 @@ end
 -- Bind the Hyper key
 f18 = hs.hotkey.bind({}, 'F18', enterHyperMode, exitHyperMode)
 
-hyper:bind({}, "B", function()
-  hs.application.launchOrFocus("Brave Browser")
-end)
+-- hyper:bind({}, "B", function()
+--   hs.application.launchOrFocus("Brave Browser")
+-- end)
 
 hyper:bind({}, "F", function()
   hs.application.launchOrFocus("Firefox")
@@ -40,9 +40,9 @@ hyper:bind({}, "T", function()
   hs.application.launchOrFocus("Terminal")
 end)
 
-hyper:bind({}, "D", function()
-  hs.application.launchOrFocus("DBeaver")
-end)
+-- hyper:bind({}, "D", function()
+--   hs.application.launchOrFocus("DBeaver")
+-- end)
 
 hyper:bind({}, "Z", function()
   hs.application.launchOrFocus("Zed")

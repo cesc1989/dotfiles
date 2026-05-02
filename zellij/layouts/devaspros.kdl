@@ -58,18 +58,7 @@ layout {
     }
   }
 
-  tab name="dotfiles" cwd="~/projects/dotfiles" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="web&blog (7)" cwd="~/projects/franciscoquintero" {
+  tab name="web&blog" cwd="~/projects/franciscoquintero" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

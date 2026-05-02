@@ -1,6 +1,6 @@
 // Este layout todos los proyectos de DevAsPros.
 //
-// Cash Flow, CoshiNotes, Enlacito, etc.
+// Cash Flow, Coshi Notes, Enlacito, etc.
 //
 layout {
   tab name="cashflow (1)" focus=true cwd="~/projects/devaspros-projects/cashflow" {
@@ -36,7 +36,7 @@ layout {
     }
   }
 
-  tab name="laboratorio" cwd="~/projects/laboratorio_de_ruby" {
+  tab name="supermenu" cwd="~/projects/devaspros-projects/supermenu" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -47,8 +47,7 @@ layout {
     }
   }
 
-  // Para tener un espacio para cualquier cosa
-  tab name="libre (5)" cwd="~/projects/devaspros-projects/" {
+  tab name="laboratorio (5)" cwd="~/projects/laboratorio_de_ruby" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -71,17 +70,6 @@ layout {
   }
 
   tab name="web&blog (7)" cwd="~/projects/franciscoquintero" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="supermenu" cwd="~/projects/devaspros-projects/supermenu" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

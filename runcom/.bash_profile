@@ -49,12 +49,6 @@ fi
 ## PYTHON STUFF
 ####
 
-# Load Python 2 - for node-sass
-#
-# This is for macOS Mojave
-if [ -d "$HOME/Library/Python/2.7/bin" ]; then
-  export PATH="$PATH:/Users/fquintero/Library/Python/2.7/bin"
-fi
 
 # Load pyenv
 #
@@ -75,8 +69,6 @@ export PATH="$HOME/.local/bin:${PATH}"
 # Load chruby in macos M1 Ventura
 #
 if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
-  # chruby ruby-3.0.2
-
   source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
   source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 fi
@@ -117,13 +109,6 @@ fi
 ## LINUX MINT
 ####
 
-# Make Postman available via command line
-#
-# This is for Linux Mint personal computer
-if [ -d "/home/cesc/Postman" ]; then
-  export PATH=$HOME/Postman:$PATH
-fi
-
 # Load chruby in Linux Mint
 #
 if [ -d "/usr/local/share/chruby/" ]; then
@@ -151,14 +136,6 @@ export GPG_TTY=$(tty)
 # Load Hub bash completion script
 if [ -f ~/hub.bash_completion.sh ]; then
   . ~/hub.bash_completion.sh
-fi
-
-# Setup asdf if .asdf folder exists
-#
-# See https://asdf-vm.com/guide/getting-started.html
-if [ -d "$HOME/.asdf" ]; then
-  . "$HOME/.asdf/asdf.sh"
-  . "$HOME/.asdf/completions/asdf.bash"
 fi
 
 # Prevent when running scripts in a rails console it breaks.

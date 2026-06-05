@@ -47,7 +47,7 @@ layout {
     }
   }
 
-  tab name="laboratorio (5)" cwd="~/projects/laboratorio_de_ruby" {
+  tab name="postlane (5)" cwd="~/projects/devaspros-projects/postlane-backend" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -58,7 +58,7 @@ layout {
     }
   }
 
-  tab name="puntapie" cwd="~/projects/devaspros-projects/puntapie" {
+  tab name="laboratorio" cwd="~/projects/laboratorio_de_ruby" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -69,7 +69,18 @@ layout {
     }
   }
 
-  tab name="web&blog (7)" cwd="~/projects/franciscoquintero" {
+  tab name="puntapie (7)" cwd="~/projects/devaspros-projects/puntapie" {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="web&blog" cwd="~/projects/franciscoquintero" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

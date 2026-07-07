@@ -1,9 +1,7 @@
 // Este layout todos los proyectos de DevAsPros.
 //
-// Cash Flow, Coshi Notes, Enlacito, etc.
-//
 layout {
-  tab name="cashflow (1)" focus=true cwd="~/projects/devaspros-projects/cashflow" {
+  tab name="cashflow" focus=true cwd="~/projects/devaspros-projects/cashflow" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -14,7 +12,7 @@ layout {
     }
   }
 
-  tab name="coshinotes" cwd="~/projects/devaspros-projects/coshinotes" {
+  tab name="coshinotes (2)" cwd="~/projects/devaspros-projects/coshinotes" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -25,7 +23,7 @@ layout {
     }
   }
 
-  tab name="enlacito (3)" cwd="~/projects/devaspros-projects/enlacito" {
+  tab name="enlacito" cwd="~/projects/devaspros-projects/enlacito" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -36,7 +34,7 @@ layout {
     }
   }
 
-  tab name="supermenu" cwd="~/projects/devaspros-projects/supermenu" {
+  tab name="supermenu (4)" cwd="~/projects/devaspros-projects/supermenu" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -47,7 +45,7 @@ layout {
     }
   }
 
-  tab name="postlane (5)" cwd="~/projects/devaspros-projects/postlane-backend" {
+  tab name="postlane" cwd="~/projects/devaspros-projects/postlane-backend" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
@@ -58,29 +56,7 @@ layout {
     }
   }
 
-  tab name="laboratorio" cwd="~/projects/laboratorio_de_ruby" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="puntapie (7)" cwd="~/projects/devaspros-projects/puntapie" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="web&blog" cwd="~/projects/franciscoquintero" {
+  tab name="laboratorio (6)" cwd="~/projects/laboratorio_de_ruby" {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }

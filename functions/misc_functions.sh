@@ -1,21 +1,5 @@
 #!/usr/bin/env bash
 
-# To change between several AWS accounts configured in `~/.aws/config`
-#
-# Example:
-#
-#    $ setaws alpha
-setaws() {
-  if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied"
-    echo "Example: setaws alpha"
-  else
-    echo "Exporting aws profiles to: $1"
-    export AWS_PROFILE=$1
-  fi
-}
-
 # Convierte un hash de Ruby con credenciales de create_new_auth_token
 # en cabeceras HTTP para usar en peticiones GQL desde Postman
 #

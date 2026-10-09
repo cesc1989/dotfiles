@@ -1,11 +1,18 @@
-// Este layout todos los proyectos de DevAsPros.
-//
 layout {
-  tab name="cashflow" focus=true cwd="~/projects/devaspros-projects/cashflow" {
+  default_tab_template {
     pane size=2 borderless=true {
       plugin location="zellij:tab-bar"
     }
 
+    children
+
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+
+  tab name="cashflow" focus=true cwd="~/projects/devaspros-projects/cashflow" {
     pane split_direction="vertical" {
       pane
       pane
@@ -13,10 +20,6 @@ layout {
   }
 
   tab name="coshinotes (2)" cwd="~/projects/devaspros-projects/coshinotes" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
     pane split_direction="vertical" {
       pane
       pane
@@ -24,10 +27,6 @@ layout {
   }
 
   tab name="enlacito" cwd="~/projects/devaspros-projects/enlacito" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
     pane split_direction="vertical" {
       pane
       pane
@@ -35,10 +34,6 @@ layout {
   }
 
   tab name="supermenu (4)" cwd="~/projects/devaspros-projects/supermenu" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
     pane split_direction="vertical" {
       pane
       pane
@@ -46,10 +41,6 @@ layout {
   }
 
   tab name="postlane" cwd="~/projects/devaspros-projects/postlane-backend" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-
     pane split_direction="vertical" {
       pane
       pane
@@ -57,10 +48,13 @@ layout {
   }
 
   tab name="laboratorio (6)" cwd="~/projects/laboratorio_de_ruby" {
-    pane size=2 borderless=true {
-      plugin location="zellij:tab-bar"
+    pane split_direction="vertical" {
+      pane
+      pane
     }
+  }
 
+  tab name="prototipos" cwd="~/projects/devaspros-projects/prototipos" {
     pane split_direction="vertical" {
       pane
       pane

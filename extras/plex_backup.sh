@@ -7,13 +7,17 @@
 systemctl stop plexmediaserver.service
 
 PLEX='/var/lib/plexmediaserver/Library/Application Support/Plex Media Server'
+EXCLUDES=(
+  --exclude="$PLEX/Diagnostics"
+  --exclude="$PLEX/Logs"
+  --exclude="$PLEX/Updates"
+  --exclude="$PLEX/Crash Reports"
+  --exclude="$PLEX/Cache"
+  --exclude="$PLEX/Codecs"
+  --exclude="$PLEX/Plug-in Support/Caches"
+)
 
 tar -cjpvf /media/cesc/plexmediaserver_$(date +%Y-%-m-%d_%H-%M-%S).tar.bz2 \
-    --exclude '$PLEX/Diagnostics' \
-    --exclude '$PLEX/Logs' \
-    --exclude '$PLEX/Updates' \
-    --exclude '$PLEX/Crash Reports' \
-    --exclude '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Cache' \
-    /var/lib/plexmediaserver
+    "${EXCLUDES[@]}" /var/lib/plexmediaserver
 
 systemctl start plexmediaserver.service

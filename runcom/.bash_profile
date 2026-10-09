@@ -2,6 +2,8 @@
 
 # See webpro installation script: https://github.com/webpro/dotfiles/blob/master/runcom/.bash_profile
 
+export EDITOR="subl -w"
+
 # Load all current dotfiles
 for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases}; do
   [ -f "$DOTFILE" ] && source $DOTFILE

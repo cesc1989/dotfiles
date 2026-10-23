@@ -39,7 +39,7 @@ alias gco="git checkout"
 ## Git Remotes
 #
 alias gps="git push"
-alias gpl="git pull"
+alias gpl="git pull --prune"
 alias gf="git fetch"
 alias grso="git remote show origin"
 alias gpruneorigin="git remote prune origin"

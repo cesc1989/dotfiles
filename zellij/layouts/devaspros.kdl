@@ -11,21 +11,6 @@ layout {
     }
   }
 
-
-  tab name="cashflow" focus=true cwd="~/projects/devaspros-projects/cashflow" {
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
-  tab name="coshinotes (2)" cwd="~/projects/devaspros-projects/coshinotes" {
-    pane split_direction="vertical" {
-      pane
-      pane
-    }
-  }
-
   tab name="enlacito" cwd="~/projects/devaspros-projects/enlacito" {
     pane split_direction="vertical" {
       pane
@@ -33,21 +18,21 @@ layout {
     }
   }
 
-  tab name="supermenu (4)" cwd="~/projects/devaspros-projects/supermenu" {
+  tab name="postlane (2)" cwd="~/projects/devaspros-projects/postlane-backend" {
     pane split_direction="vertical" {
       pane
       pane
     }
   }
 
-  tab name="postlane" cwd="~/projects/devaspros-projects/postlane-backend" {
+  tab name="supermenu" cwd="~/projects/devaspros-projects/supermenu" {
     pane split_direction="vertical" {
       pane
       pane
     }
   }
 
-  tab name="laboratorio (6)" cwd="~/projects/laboratorio_de_ruby" {
+  tab name="website (4)" cwd="~/projects/devaspros-projects/website" {
     pane split_direction="vertical" {
       pane
       pane

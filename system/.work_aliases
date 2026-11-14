@@ -4,6 +4,7 @@
 #
 alias zetwopanes="zellij --layout two_panes"
 alias zedap="zellij --layout devaspros"
+alias zeper="zellij --layout personal"
 
 ## Git Pull Requests
 #

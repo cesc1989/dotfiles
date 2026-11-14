@@ -66,6 +66,7 @@ En macos:
 ```bash
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
 ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
 ```
 
 En Linux Mint:
@@ -73,6 +74,7 @@ En Linux Mint:
 ```bash
 ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
 ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
 ```
 
 ## Hammerspoon - Solo macOS

@@ -48,23 +48,6 @@ if [ -d "$HOME/.nvm" ]; then
 fi
 
 ####
-## PYTHON STUFF
-####
-
-
-# Load pyenv
-#
-# This is for macOS Ventura (v13)
-if [ -d "$HOME/.pyenv/shims" ]; then
-  export PATH="$HOME/.pyenv/shims:${PATH}"
-fi
-
-# Load pipenv
-#
-# As explained here https://pipenv.pypa.io/en/latest/installation/#preferred-installation-of-pipenv
-export PATH="$HOME/.local/bin:${PATH}"
-
-####
 ## MACOS
 ####
 

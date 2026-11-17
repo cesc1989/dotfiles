@@ -16,8 +16,11 @@ done
 
 ## Symlink ssh config to ~/.ssh/config and Zellij layouts
 #
-echo "Symlink de ssh config"
-ln -sv "/Users/$(whoami)/projects/dotfiles/ssh/config" ~/.ssh/config
+config_link="$HOME/.ssh/config"
+if [[ ! -L ${config_link} ]] && [[ ! -e ${config_link} ]]; then
+  echo "Symlink de ssh config"
+  ln -sv "/Users/$(whoami)/projects/dotfiles/ssh/config" ~/.ssh/config
+fi
 
 echo "Symlink de layouts de Zellij"
 echo ""
@@ -30,10 +33,26 @@ case "$OSTYPE" in
 esac
 
 echo "Symlink de Zellij templates para $os_type"
+echo ""
+
 if [[ $os_type == "macos" ]]; then
-  ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
-  ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
-  ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
+  two_panes_link="$HOME/.config/zellij/layouts/two_panes.kdl"
+  if [[ ! -L ${two_panes_link} && ! -e ${two_panes_link} ]]; then
+    echo "Symlink de ${two_panes_link}"
+    ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
+  fi
+
+  devaspros_link="$HOME/.config/zellij/layouts/devaspros.kdl"
+  if [[ ! -L ${devaspros_link} && ! -e ${devaspros_link} ]]; then
+    echo "Symlink de ${devaspros_link}"
+    ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+  fi
+
+  personal_link="$HOME/.config/zellij/layouts/personal.kdl"
+  if [[ ! -L ${personal_link} && ! -e ${personal_link} ]]; then
+    echo "Symlink de ${personal_link}"
+    ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
+  fi
 elif [[ $os_type == "linux" ]]; then
   ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
   ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl

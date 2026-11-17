@@ -4,6 +4,12 @@
 
 export EDITOR="subl -w"
 
+# Homebrew (Apple Silicon)
+#
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Load all current dotfiles
 for DOTFILE in $HOME/projects/dotfiles/system/.{prompt,alias,work_aliases}; do
   [ -f "$DOTFILE" ] && source $DOTFILE

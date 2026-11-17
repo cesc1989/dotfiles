@@ -86,7 +86,7 @@ alias dap_node="ssh dap_node"
 alias dap_hatch="ssh dap_hatch"
 alias funciones="cat ~/projects/dotfiles/system/.functions"
 alias fms="foreman start"
-alias jese="bundle exec jekyll serve --livereload"
+alias jese="bundle exec jekyll serve --livereload --host 0.0.0.0"
 alias nud="nvm use default"
 
 ## Editores de Texto

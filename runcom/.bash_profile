@@ -135,6 +135,12 @@ if [ -d "/Users/francisco/.opencode/bin/" ]; then
   export PATH="/Users/francisco/.opencode/bin:$PATH"
 fi
 
+# Claude Code (instalador nativo) y otros binarios de usuario
+#
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 ####
 ## LINUX MINT
 ####

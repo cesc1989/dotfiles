@@ -1,5 +1,5 @@
 -- A global variable for the Hyper Mode
-hyper = hs.hotkey.modal.new({}, 'F17')
+hyper = hs.hotkey.modal.new({}, "F17")
 
 -- Enter Hyper Mode when F18 (Hyper/Capslock) is pressed
 function enterHyperMode()
@@ -11,14 +11,15 @@ end
 -- send ESCAPE if no other keys are pressed.
 function exitHyperMode()
   hyper:exit()
+
   if not hyper.triggered then
     -- See Hammerspoon keymap https://www.hammerspoon.org/docs/hs.keycodes.html#map
-    hs.eventtap.keyStroke({}, 'shift') -- Prefiero no usar ESCAPE para que no me cierre modales o ventanas.
+    hs.eventtap.keyStroke({}, "shift") -- Prefiero no usar ESCAPE para que no me cierre modales o ventanas.
   end
 end
 
 -- Bind the Hyper key
-f18 = hs.hotkey.bind({}, 'F18', enterHyperMode, exitHyperMode)
+f18 = hs.hotkey.bind({}, "F18", enterHyperMode, exitHyperMode)
 
 hyper:bind({}, "B", function()
   hs.application.launchOrFocus("Brave Browser")

@@ -22,9 +22,6 @@ if [[ ! -L ${config_link} ]] && [[ ! -e ${config_link} ]]; then
   ln -sv "/Users/$(whoami)/projects/dotfiles/ssh/config" ~/.ssh/config
 fi
 
-echo "Symlink de layouts de Zellij"
-echo ""
-
 os_type=""
 case "$OSTYPE" in
   darwin*) os_type="macos" ;;
@@ -38,25 +35,39 @@ echo ""
 if [[ $os_type == "macos" ]]; then
   two_panes_link="$HOME/.config/zellij/layouts/two_panes.kdl"
   if [[ ! -L ${two_panes_link} && ! -e ${two_panes_link} ]]; then
-    echo "Symlink de ${two_panes_link}"
+    echo "Symlink de Zellij ${two_panes_link} layout"
     ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
   fi
 
   devaspros_link="$HOME/.config/zellij/layouts/devaspros.kdl"
   if [[ ! -L ${devaspros_link} && ! -e ${devaspros_link} ]]; then
-    echo "Symlink de ${devaspros_link}"
+    echo "Symlink de Zellij ${devaspros_link} layout"
     ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
   fi
 
   personal_link="$HOME/.config/zellij/layouts/personal.kdl"
   if [[ ! -L ${personal_link} && ! -e ${personal_link} ]]; then
-    echo "Symlink de ${personal_link}"
+    echo "Symlink de Zellij ${personal_link} layout"
     ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
   fi
 elif [[ $os_type == "linux" ]]; then
-  ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
-  ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
-  ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
+  two_panes_link="$HOME/.config/zellij/layouts/two_panes.kdl"
+  if [[ ! -L ${two_panes_link} && ! -e ${two_panes_link} ]]; then
+    echo "Symlink de Zellij ${two_panes_link} layout"
+    ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
+  fi
+
+  devaspros_link="$HOME/.config/zellij/layouts/devaspros.kdl"
+  if [[ ! -L ${devaspros_link} && ! -e ${devaspros_link} ]]; then
+    echo "Symlink de Zellij ${devaspros_link} layout"
+    ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+  fi
+
+  personal_link="$HOME/.config/zellij/layouts/personal.kdl"
+  if [[ ! -L ${personal_link} && ! -e ${personal_link} ]]; then
+    echo "Symlink de Zellij ${personal_link} layout"
+    ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
+  fi
 fi
 
 ## Load git autocompletion script

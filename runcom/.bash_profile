@@ -14,6 +14,32 @@ for FUNCTION in $HOME/projects/dotfiles/functions/*.sh; do
   [ -f "$FUNCTION" ] && source $FUNCTION
 done
 
+## Symlink ssh config to ~/.ssh/config and Zellij layouts
+#
+echo "Symlink de ssh config"
+ln -sv "/Users/$(whoami)/projects/dotfiles/ssh/config" ~/.ssh/config
+
+echo "Symlink de layouts de Zellij"
+echo ""
+
+os_type=""
+case "$OSTYPE" in
+  darwin*) os_type="macos" ;;
+  linux*)  os_type="linux" ;;
+  *)       os_type="desconocido"
+esac
+
+echo "Symlink de Zellij templates para $os_type"
+if [[ $os_type == "macos" ]]; then
+  ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
+  ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+  ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
+elif [[ $os_type == "linux" ]]; then
+  ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
+  ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
+  ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
+fi
+
 ## Load git autocompletion script
 #
 # -f is for regular files. Those that can be created with `touch` command

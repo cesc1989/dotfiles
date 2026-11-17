@@ -1,0 +1,14 @@
+## DevAsPros Servers
+#
+Host dap_node
+  HostName 139.144.196.192
+  User ubuntu
+  Port 54321
+  IdentityFile ~/.ssh/linode
+
+Host dap_hatch
+  HostName 134.195.90.227
+  User ubuntu
+  Port 54321
+  IdentityFile ~/.ssh/linode
+  IdentitiesOnly yes

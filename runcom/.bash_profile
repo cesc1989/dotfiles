@@ -74,6 +74,12 @@ elif [[ $os_type == "linux" ]]; then
     echo "Symlink de Zellij ${personal_link} layout"
     ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
   fi
+
+  homelab_link="$HOME/.config/zellij/layouts/homelab.kdl"
+  if [[ ! -L ${homelab_link} && ! -e ${homelab_link} ]]; then
+    echo "Symlink de Zellij ${homelab_link} layout"
+    ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/homelab.kdl" ~/.config/zellij/layouts/homelab.kdl
+  fi
 fi
 
 ## Load git autocompletion script

@@ -1,0 +1,27 @@
+layout {
+  default_tab_template {
+    pane size=2 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    children
+
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab name="Homer" focus=true cwd="~/homer" {
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+
+  tab name="FC Manager" cwd="~/projects/fcmanager" {
+    pane split_direction="vertical" {
+      pane
+      pane
+    }
+  }
+}

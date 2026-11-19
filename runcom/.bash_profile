@@ -119,13 +119,6 @@ fi
 ## MACOS
 ####
 
-# Load chruby in macos M1 Ventura
-#
-if [ -d "/opt/homebrew/opt/chruby/share/chruby" ]; then
-  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-fi
-
 # Load Image Magick
 #
 # This is for macos Ventura
@@ -168,13 +161,6 @@ fi
 ## LINUX MINT
 ####
 
-# Load chruby in Linux Mint
-#
-if [ -d "/usr/local/share/chruby/" ]; then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-fi
-
 if [ -d "/home/cesc/Zellij" ]; then
   export PATH=$HOME/Zellij:$PATH
 fi
@@ -186,6 +172,12 @@ fi
 ####
 ## GENERAL
 ####
+
+# mise: to install ruby, node, and more with precompiled binaries
+#
+if [ -f "$HOME/.local/bin/mise" ]; then
+  eval "$(/Users/francisco/.local/bin/mise activate bash)"
+fi
 
 # Make gpg commit signing work or evade problems
 #

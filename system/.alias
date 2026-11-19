@@ -50,6 +50,8 @@ alias gf="git fetch"
 alias grso="git remote show origin"
 alias gpruneorigin="git remote prune origin"
 
+alias build_commit="git commit --allow-empty -m 'Trigger Build' && gps"
+
 ## Hub
 #
 alias hpr="hub pull-request -c"

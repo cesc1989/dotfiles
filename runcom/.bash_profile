@@ -80,6 +80,11 @@ elif [[ $os_type == "linux" ]]; then
     echo "Symlink de Zellij ${homelab_link} layout"
     ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/homelab.kdl" ~/.config/zellij/layouts/homelab.kdl
   fi
+
+  # Zellij abre shells no-login que solo leen ~/.bashrc
+  if ! grep -qs 'bash_profile' ~/.bashrc; then
+    echo "Aviso: ~/.bashrc no carga ~/.bash_profile. En Zellij no tendrás tus alias (ver README, sección bashrc)."
+  fi
 fi
 
 ## Load git autocompletion script

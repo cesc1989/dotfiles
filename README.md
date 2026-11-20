@@ -11,25 +11,15 @@ cd ~/projects
 git clone https://github.com/cesc1989/dotfiles
 ```
 
-Crea un enlace simbólico a la carpeta `$HOME`.
-
-En Linux Mint:
+Crea un enlace simbólico a la carpeta `$HOME`:
 
 ```bash
-ln -sv "/home/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
-ln -sv "/home/$(whoami)/projects/dotfiles/git/.gitconfig" ~
-ln -sv "/home/$(whoami)/projects/dotfiles/rails/.railsrc" ~
+ln -sv "$HOME/projects/dotfiles/runcom/.bash_profile" ~
+ln -sv "$HOME/projects/dotfiles/git/.gitconfig" ~
+ln -sv "$HOME/projects/dotfiles/rails/.railsrc" ~
 ```
 
-En macOS:
-
-```bash
-ln -sv "/Users/$(whoami)/projects/dotfiles/runcom/.bash_profile" ~
-ln -sv "/Users/$(whoami)/projects/dotfiles/git/.gitconfig" ~
-ln -sv "/Users/$(whoami)/projects/dotfiles/rails/.railsrc" ~
-```
-
-Añade esto en el archivo `~/.profile`:
+Añade esto en el archivo `~/.profile` o `~/.bashrc`:
 
 ```bash
 if [ -f "$HOME/.bash_profile" ]; then
@@ -59,31 +49,13 @@ fi
 
 ### Layouts
 
-Asegura que la carpeta `~/.config/zellij/layouts` exista y luego haz un enlace símbolico de los archivos de layouts que están en este proyecto.
+Asegura que la carpeta `~/.config/zellij/layouts` para que se puedan crear los enlaces simbolicos correspondientes.
 
-En macos:
-
-```bash
-ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
-ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
-ln -sv "/Users/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
-```
-
-En Linux Mint:
-
-```bash
-ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/two_panes.kdl" ~/.config/zellij/layouts/two_panes.kdl
-ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/devaspros.kdl" ~/.config/zellij/layouts/devaspros.kdl
-ln -sv "/home/$(whoami)/projects/dotfiles/zellij/layouts/personal.kdl" ~/.config/zellij/layouts/personal.kdl
-```
-
-## Hammerspoon - Solo macOS
+## Hammerspoon. Solo macos
 
 Necesario tener instalado [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) y [Hammerspoon](http://www.hammerspoon.org/).
 
-Esta es una herramienta para atajos de teclado mediante scripts escritos en Lua.
-
-Para activarlos hay que hacer el enlace simbólico:
+Esta es una herramienta para atajos de teclado mediante scripts escritos en Lua. Para activarlos hay que hacer el enlace simbólico:
 
 ```bash
 ln -sv "/Users/$(whoami)/projects/dotfiles/hammerspoon/init.lua" ~/.hammerspoon/init.lua

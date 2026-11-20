@@ -176,7 +176,7 @@ fi
 # mise: to install ruby, node, and more with precompiled binaries
 #
 if [ -f "$HOME/.local/bin/mise" ]; then
-  eval "$(/Users/francisco/.local/bin/mise activate bash)"
+  eval "$($HOME/.local/bin/mise activate bash)"
 fi
 
 # Make gpg commit signing work or evade problems

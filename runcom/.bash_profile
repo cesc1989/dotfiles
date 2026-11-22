@@ -25,7 +25,7 @@ done
 config_link="$HOME/.ssh/config"
 if [[ ! -L ${config_link} ]] && [[ ! -e ${config_link} ]]; then
   echo "Symlink de ssh config"
-  ln -sv "/Users/$(whoami)/projects/dotfiles/ssh/config" ~/.ssh/config
+  ln -sv "$HOME/projects/dotfiles/ssh/config" ~/.ssh/config
 fi
 
 os_type=""
